@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping("api/user")
 public class UserController {
 
     // KBJ 테스트
+    // KBJ 테스트2 (커밋 풀 푸쉬)
 }
