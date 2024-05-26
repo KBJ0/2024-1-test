@@ -5,11 +5,14 @@ import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
 
     @ExceptionHandler(NullPointerException.class)
     public ResultDto<String> handleNullPointerException(NullPointerException ex) {
@@ -49,4 +52,15 @@ public class GlobalExceptionHandler {
         return ResultDto.resultDto(HttpStatus.BAD_REQUEST, errorMessage);
     }
 
+    @ExceptionHandler(MissingServletRequestParameterException.class)
+    public ResultDto<String> handleMissingServletRequestParameterException(MissingServletRequestParameterException ex) {
+        ex.printStackTrace();
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "입력하신 정보 일부분이 누락되었습니다.");
+    }
+
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    public ResultDto<String> handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException ex) {
+        ex.printStackTrace();
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "서버 통신 에러. 포스트맨이나 스웨거 바꿔서 사용 or 보내는 값의 타입 확인 하셈. (MissingServletRequestParameterException)");
+    }
 }

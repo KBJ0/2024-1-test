@@ -2,16 +2,18 @@ package com.green.gittest.todolist.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-
 @Data
-public class PostDoToListReq {
-    @JsonIgnore
-    private long listId;
+@NoArgsConstructor
+@AllArgsConstructor
+public class UpdateToDoListReq {
     private long userId;
+    private long listId;
     private String title;
     private String content;
 
