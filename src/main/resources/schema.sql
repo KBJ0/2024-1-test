@@ -32,10 +32,8 @@ CREATE TABLE todolist (
 
 
 CREATE TABLE todolist_image (
+    image_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     list_id BIGINT NOT NULL,
-    image_id BIGINT NOT NULL AUTO_INCREMENT,
-    content_image VARCHAR(50) NULL,
-    PRIMARY KEY (list_id, image_id),
-    FOREIGN KEY (list_id) REFERENCES todolist(list_id),
-    FOREIGN KEY (image_id) REFERENCES image(image_id)
+    content_image VARCHAR(255) NULL,
+    FOREIGN KEY (list_id) REFERENCES todolist(list_id) ON DELETE CASCADE
 );
