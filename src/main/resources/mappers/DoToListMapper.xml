@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.gittest.todolist.ToDoListMapper">
+
+
+    <insert id="postToDoList" useGeneratedKeys="true" keyProperty="listId"> <!-- 수정되었음 -->
+        INSERT INTO todolist
+        (user_id, title, content, start_date, deadline_date, is_completed, favorite)
+        VALUES
+        (#{userId}, #{title}, #{content}, #{startDate}, #{deadlineDate}, #{isCompleted}, #{favorite}) <!-- 수정되었음 -->
+    </insert>
+
+    <insert id="postToDoListPics" useGeneratedKeys="true" keyProperty="imageId">
+        INSERT INTO todolist_image
+        (list_id, content_image)
+        VALUES
+        <foreach item="item" collection="fileNames" separator=",">
+            (#{listId}, #{item})
+        </foreach>
+    </insert>
+
+<!--    <insert id="postToDoList"-->
+<!--            useGeneratedKeys="true"-->
+<!--            keyProperty="listId">-->
+<!--        INSERT INTO todolist-->
+<!--        SET user_id = #{userId}-->
+<!--        , title = #{title}-->
+<!--        , content = #{content}-->
+<!--        , start_date = #{startDate}-->
+<!--        , deadline_date = #{deadlineDate}-->
+<!--        , is_completed = #{isCompleted}-->
+<!--        , favorite = #{favorite}-->
+<!--    </insert>-->
+
+<!--    <insert id="postToDoListPics">-->
+<!--        INSERT INTO todolist_image-->
+<!--        (list_id, content_image)-->
+<!--        VALUES-->
+<!--        <foreach item="item" collection="fileNames" separator=",">-->
+<!--            (#{listId}, #{item})-->
+<!--        </foreach>-->
+<!--    </insert>-->
+
+    <select id="getFeed">
+        SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        INNER JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C
+        ON A.feed_id = C.feed_id
+        AND C.user_id = #{signedUserId}
+        ORDER BY A.feed_id DESC
+        LIMIT #{startIdx}, #{size}
+    </select>
+
+    <select id="getFeedPicsByFeedId">
+        SELECT pic
+        FROM feed_pics
+        WHERE feed_id = #{feedId}
+    </select>
+
+    <select id="getFeedCommentTopBy4ByFeedId">
+        SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = #{feedId}
+        LIMIT 4
+    </select>
+
+
+</mapper>
