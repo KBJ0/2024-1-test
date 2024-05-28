@@ -51,15 +51,48 @@ public class ToDoListService {
         return PostToDoListRes.builder().listId(p.getListId()).contentImages(picDto.getFileNames()).build();
     }
 
+
+
+
+    //    public List<GetToDoListRes> getToDoList(int userId) {
+//        List<GetToDoListRes> list = mapper.getToDoListByUserIdForRead(userId);
+//        if(list == null || list.isEmpty()) {throw new UserNotFoundException();} //없는 유저일 경우 반환
+//        for(GetToDoListRes res : list){
+//            List<String> contentImages = mapper.getContentImageByListId(res.getListId());
+//            res.setContentImages(contentImages);
+//        }
+//        return list;
+//    }
+//    public List<GetToDoListRes> getFavoriteToDoList(Integer userId) {
+//        List<GetToDoListRes> list = mapper.getFavoriteToDoListByUserIdForRead(userId);
+//        if(list == null || list.isEmpty()) {throw new UserNotFoundException();} //없는 유저일 경우 반환
+//        for(GetToDoListRes res : list){
+//            List<String> contentImages = mapper.getContentImageByListId(res.getListId());
+//            res.setContentImages(contentImages);
+//        }
+//        return list;
+//    } 해당 코드를 줄이면 아래와 같음.
     public List<GetToDoListRes> getToDoList(int userId) {
         List<GetToDoListRes> list = mapper.getToDoListByUserIdForRead(userId);
-        if(list == null || list.isEmpty()) {throw new UserNotFoundException();} //없는 유저일 경우 반환
-        for(GetToDoListRes res : list){
+        return getList(list);
+    }
+    public List<GetToDoListRes> getFavoriteToDoList(int userId) {
+        List<GetToDoListRes> list = mapper.getFavoriteToDoListByUserIdForRead(userId);
+        return getList(list);
+    }
+    private List<GetToDoListRes> getList(List<GetToDoListRes> list) {
+        if (list == null || list.isEmpty()) {
+            throw new UserNotFoundException(); // 없는 유저일 경우 반환
+        }
+        for (GetToDoListRes res : list) {
             List<String> contentImages = mapper.getContentImageByListId(res.getListId());
             res.setContentImages(contentImages);
         }
         return list;
     }
+
+
+
 
     public int updateToDoList(UpdateToDoListReq p) {
         UpdateToDoListReq result = mapper.getToDoListByUserIdForUpdate(p.getUserId(), p.getListId());

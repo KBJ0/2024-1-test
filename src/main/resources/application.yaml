@@ -8,12 +8,11 @@ spring:
     open-in-view: false
     properties:
       hibernate:
-        cache.use_second_level_cache: false  # JCache ?? ??
+        cache.use_second_level_cache: false  # JCache 설정 비활성화
   servlet:
     multipart:
       max-file-size: 5MB
       max-request-size: 30MB
-
 
 mybatis:
   mapper-locations: mappers/**/*.xml

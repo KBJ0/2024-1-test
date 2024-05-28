@@ -40,6 +40,13 @@ public class ToDoListController {
         return ResultDto.resultDto(HttpStatus.OK, "일정을 불러옵니다.", result);
     }
 
+    @GetMapping("favorite")
+    public ResultDto<List<GetToDoListRes>> getFavoriteToDoList(@RequestParam(name ="signedUserId") Integer userId){
+        log.info("userId: {}", userId);
+        List<GetToDoListRes> result = service.getFavoriteToDoList(userId);
+        return ResultDto.resultDto(HttpStatus.OK, "중요한 일정을 불러옵니다.", result);
+    }
+
     // 사진을 패치할 경우 어떻게 처리할 것인가?
     // 1. 기존 사진을 지우고 업로드한 사진만 넣는다.
     // 2. 기존 사진을 유지하고 업로드한 사진을 추가한다.

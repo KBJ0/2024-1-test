@@ -3,6 +3,7 @@ package com.green.gittest.user;
 
 
 import com.green.gittest.common.CustomFileUtils;
+import com.green.gittest.common.GlobalChecker;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import com.green.gittest.user.model.*;
@@ -13,18 +14,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
+import static com.green.gittest.common.GlobalConst.*;
 
 
 @RequiredArgsConstructor
 @Service
 @Slf4j
 public class UserService {
-
     private final UserMapper mapper;
     private final CustomFileUtils customFileUtils;
+    private final GlobalChecker check;
 
 
     public int postSignUp(MultipartFile pic, SignUpPostReq p) {
+        check.userSignUpChecker(p); // 회원가입 시 제한사항 확인함.
+
         String path = String.format("user/%d", p.getUserId());
         customFileUtils.makeFolders(path); // 해당 유저 파일 저장소 만들기.
         String hashedPw = BCrypt.hashpw(p.getUpw(), BCrypt.gensalt());

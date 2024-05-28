@@ -26,11 +26,22 @@
         WHERE
         user_id = #{userId}
     </select>
+    <select id="getFavoriteToDoListByUserIdForRead">
+        SELECT
+        list_id AS listID, user_id AS userId, title, content, start_date AS startDate, deadline_date AS deadlineDate, is_completed AS isCompleted, favorite
+        FROM
+        todolist
+        WHERE
+        user_id = #{userId}
+        AND favorite = 1
+    </select>
     <select id="getContentImageByListId">
         SELECT content_image AS contentImage
         FROM todolist_image
         WHERE list_id = #{listId}
     </select>
+
+
 
 
     <update id="updateToDoList">

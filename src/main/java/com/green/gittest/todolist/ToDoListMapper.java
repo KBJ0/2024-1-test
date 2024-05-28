@@ -15,6 +15,7 @@ public interface ToDoListMapper {
     int postToDoListPics(PostTodoListPicDto p);
 
     List<GetToDoListRes> getToDoListByUserIdForRead(int userId);
+    List<GetToDoListRes> getFavoriteToDoListByUserIdForRead(int userId);
     List<String> getContentImageByListId(long listId);
 
     int updateToDoList(UpdateToDoListReq p);
