@@ -2,6 +2,7 @@ package com.green.gittest.user.exception;
 
 import com.green.gittest.common.GlobalExceptionHandler;
 import com.green.gittest.common.model.ResultDto;
+import com.green.gittest.common.myexception.SignUpException;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.core.annotation.Order;
@@ -44,5 +45,11 @@ public class UserException{
             errorMessage = "(참조하는 키가 존재하지 않습니다.)";
         }
         return ResultDto.resultDto(HttpStatus.BAD_REQUEST, errorMessage);
+    }
+
+    @ExceptionHandler(SignUpException.class)
+    public ResultDto<String> handleSignUpException(SignUpException ex) {
+        ex.printStackTrace();
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
     }
 }

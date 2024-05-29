@@ -4,19 +4,18 @@
 
     <insert id="postUser" useGeneratedKeys="true" keyProperty="userId">
         INSERT INTO user
-        SET uid = #{uid}
-        , email = #{email}
+        SET email = #{email}
         , upw = #{upw}
         , nickname = #{nickname}
         , profile_pic = #{profilePic}
     </insert>
 
     <select id="getUserById">
-        SELECT user_id AS userId, uid, email, upw, nickname
+        SELECT user_id AS userId, email, upw, nickname
         , profile_pic AS profilePic, sign_up_date AS signUpDate
         , profile_update AS profileUpdate
         FROM user
-        WHERE uid = #{uid}
+        WHERE email = #{email}
     </select>
 
     <update id="patchPassword">

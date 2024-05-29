@@ -1,6 +1,7 @@
 package com.green.gittest.common;
 
 import com.green.gittest.common.model.ResultDto;
+import com.green.gittest.common.myexception.SignUpException;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.core.annotation.Order;
@@ -61,6 +62,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
     public ResultDto<String> handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException ex) {
         ex.printStackTrace();
-        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "HttpMediaTypeNotSupportedException : RESTfull 에러. 포스트맨이나 스웨거 바꿔서 사용 or 보내는 값의 타입 확인 하셈. (MissingServletRequestParameterException)");
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "HttpMediaTypeNotSupportedException : RESTfull 에러. 포스트맨이나 스웨거 바꿔서 사용 or 보내는 값의 타입 확인 하셈.");
+    }
+
+    @ExceptionHandler(SignUpException.class)
+    public ResultDto<String> handleSignUpException(SignUpException ex) {
+        ex.printStackTrace();
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "SignUpException : 회원가입 오류임)");
     }
 }

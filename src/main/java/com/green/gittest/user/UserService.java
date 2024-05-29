@@ -51,9 +51,9 @@ public class UserService {
 
 
     public SignInPostRes postSignIn(SignInPostReq p) {
-        User user = mapper.getUserById(p.getUid());
+        User user = mapper.getUserById(p.getEmail());
         if (user == null) {
-            throw new UserNotFoundException("User with UID " + p.getUid() + " not found.");
+            throw new UserNotFoundException("존재하지 않는 이메일입니다. : " + p.getEmail());
         } else if (!BCrypt.checkpw(p.getUpw(), user.getUpw())) {
             throw new WrongValue("Invalid password.");
         }
