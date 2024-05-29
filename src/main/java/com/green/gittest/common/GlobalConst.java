@@ -10,7 +10,8 @@ public abstract class GlobalConst {
     public final static String EMAIL_PATTERN =
             "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
     public final static String PASSWORD_PATTERN =
-            String.format("^(?=.*[a-zA-Z])(?=.*[0-9]).+${%d,%d}",PASSWORD_MIN_SIZE,PASSWORD_MAX_SIZE);
+            String.format("^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%%^&*(),.?\":{}|<>]).{%d,%d}$", PASSWORD_MIN_SIZE, PASSWORD_MAX_SIZE);
+
     public final static String NICKNAME_PATTERN =
             String.format("^[가-힣]{%d,%d}$",NICKNAME_MIN_SIZE,NICKNAME_MAX_SIZE);
 

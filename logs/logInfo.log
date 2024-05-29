@@ -821,3 +821,55 @@ java.sql.SQLIntegrityConstraintViolationException: (conn=164) Duplicate entry 'a
 [2024-05-29 11:20:17 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [com.green.gittest.common.myexception.SignUpException: <br>비밀번호는 영문, 숫자 포함하여 8~16자리로 입력하세요.<br>닉네임은 2글자 이상 6글자 이하의 한글로 구성되어야 합니다.][0;39m
 [2024-05-29 11:20:43 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2024-05-29 11:20:43 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-29 12:15:31 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.10 with PID 14400 (D:\KBJ\BackEnd\2024-1-test\build\classes\java\main started by Administrator in D:\KBJ\BackEnd\2024-1-test)[0;39m
+[2024-05-29 12:15:31 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-29 12:15:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-29 12:15:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-29 12:15:32 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1068 ms[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5b06dfe8[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-29 12:15:33 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 2.335 seconds (process running for 2.694)[0;39m
+[2024-05-29 12:16:01 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-29 12:16:01 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-29 12:16:01 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-29 12:16:01 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.user.UserController] [36mpic: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@4d09dcd5[0;39m
+[2024-05-29 12:16:01 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=awedna2@naver.com, upw=aa11aa22!, checkPw=aa11aa22!, nickname=asda, profilePic=null)[0;39m
+[2024-05-29 12:16:01 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [com.green.gittest.common.myexception.SignUpException: <br>닉네임은 2글자 이상 6글자 이하의 한글로 구성되어야 합니다.][0;39m
+[2024-05-29 12:16:09 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.user.UserController] [36mpic: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@563a94d6[0;39m
+[2024-05-29 12:16:09 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=awedna2@naver.com, upw=aa11aa22!, checkPw=aa11aa22!, nickname=김김, profilePic=null)[0;39m
+[2024-05-29 12:16:09 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user
+        SET email = 'awedna2@naver.com'
+        , upw = '$2a$10$fpzoB9Q0sQBZZbiMJKxSG.YFBnvWN/pO4Y85Iw1lGyIC49psp1zMm'
+        , nickname = '김김'
+        , profile_pic = '4ec6fbf2-eb83-466b-a398-8b861b5dc523.jpg'
+ {executed in 2 msec}[0;39m
+[2024-05-29 12:16:09 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO user
+        SET email = 'awedna2@naver.com'
+        , upw = '$2a$10$fpzoB9Q0sQBZZbiMJKxSG.YFBnvWN/pO4Y85Iw1lGyIC49psp1zMm'
+        , nickname = '김김'
+        , profile_pic = '4ec6fbf2-eb83-466b-a398-8b861b5dc523.jpg'
+ {executed in 1 msec}[0;39m
+[2024-05-29 12:16:09 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|18        |
+|----------|
+[0;39m
+[2024-05-29 12:16:16 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.user.UserController] [36mpic: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@77c7c838[0;39m
+[2024-05-29 12:16:16 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=awedna3@naver.com, upw=aa11aa22, checkPw=aa11aa22, nickname=김김, profilePic=null)[0;39m
+[2024-05-29 12:16:16 [33mWARN [0;39m http-nio-8080-exec-2] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [com.green.gittest.common.myexception.SignUpException: <br>비밀번호는 영문, 숫자 포함하여 8~16자리로 입력하세요.][0;39m
+[2024-05-29 12:16:56 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-29 12:16:56 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
