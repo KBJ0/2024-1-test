@@ -2,38 +2,50 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.green.gittest.calendar.CalendarMapper">
 
-    <insert id="postToDoList" useGeneratedKeys="true" keyProperty="calendarId">
-        INSERT INTO todolist
+    <insert id="postCalendar" useGeneratedKeys="true" keyProperty="calendarId">
+        INSERT INTO calendar
         (user_id, pet_id, title, content, start_date, start_time)
         VALUES
-        (#{userId}, #{content}, 0)
+        (#{userId}, #{petId}, #{title}, #{content}, #{startDate}, #{startTime})
     </insert>
 
-    <select id="getToDoListByUserIdForRead">
+    <select id="getCalendarFromUserId">
         SELECT
-        list_id AS listID, user_id AS userId, content
-        , is_completed AS isCompleted, created_at AS createdAt, updated_at AS updatedAt
+        calendar_id AS calendarId, pet_id AS petId, title, content
+        , start_date AS startDate, start_time AS startTime
         FROM
-        todolist
+        calendar
         WHERE
         user_id = #{userId}
     </select>
 
-    <update id="updateToDoListContent">
-        UPDATE todolist
-        SET content = #{content}
-        WHERE list_id = #{listId}
+    <select id="getCalendarFromPetId">
+        SELECT
+        calendar_id AS calendarId, user_id AS userId, title, content
+        , start_date AS startDate, start_time AS startTime
+        FROM
+        calendar
+        WHERE
+        pet_id = #{petId}
+    </select>
+
+    <update id="updateCalendar">
+        UPDATE calendar
+        SET
+        user_id = #{userId},
+        pet_id = #{petId},
+        title = #{title},
+        content = #{content},
+        start_date = #{startDate},
+        start_time = #{startTime}
+        WHERE
+        calendar_id = #{calendarId}
     </update>
 
-    <update id="updateToDoListIsCompleted">
-        UPDATE todolist
-        SET is_completed = CASE WHEN is_completed = 0 THEN 1 ELSE 0 END
-        WHERE list_id = #{listId}
-    </update>
 
-    <delete id ="deleteToDoList">
-        DELETE from todolist
-        where list_id = #{listId}
+    <delete id ="deleteCalendar">
+        DELETE from calendar
+        where calendar_id = #{calendarId}
     </delete>
 
 </mapper>

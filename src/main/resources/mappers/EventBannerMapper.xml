@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.gittest.eventbanner.EventBannerMapper">
+    <insert id="postEventBanner" useGeneratedKeys="true" keyProperty="imageId">
+        INSERT INTO event_banner
+        (image_url)
+        VALUES
+        (#{imageUrl})
+    </insert>
+
+    <select id="getEventBanner">
+        SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT #{startIdx}, #{size}
+
+    </select>
+
+    <delete id ="deleteEventBanner">
+        DELETE from event_banner
+        where image_id = #{imageId}
+    </delete>
+
+</mapper>

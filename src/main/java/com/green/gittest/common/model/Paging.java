@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.ToString;
 import java.beans.ConstructorProperties;
 
+import static com.green.gittest.common.GlobalConst.PAGE_NULL_NUM;
+import static com.green.gittest.common.GlobalConst.SIZE_NULL_NUM;
+
 @Getter
 @ToString
 public class Paging {
@@ -18,8 +21,8 @@ public class Paging {
 
     @ConstructorProperties({"page", "size"})
     public Paging(Integer page, Integer size) {
-        this.page = page == null ? 1 : page;
-        this.size = size == null ? 10 : size;
+        this.page = page == null ? PAGE_NULL_NUM : page;
+        this.size = size == null ? SIZE_NULL_NUM : size;
         this.startIdx = (this.page - 1) * this.size;
     }
 

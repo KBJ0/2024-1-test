@@ -1,6 +1,10 @@
 package com.green.gittest.common;
 
 public abstract class GlobalConst {
+    public final static int PAGE_NULL_NUM = 1;
+    public final static int SIZE_NULL_NUM = 5;
+
+
     public final static int PASSWORD_MIN_SIZE = 8;
     public final static int PASSWORD_MAX_SIZE = 16;
     public final static int NICKNAME_MIN_SIZE = 2;
