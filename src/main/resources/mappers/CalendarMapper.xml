@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.green.gittest.todolist.ToDoListMapper">
+<mapper namespace="com.green.gittest.calendar.CalendarMapper">
 
-    <insert id="postToDoList" useGeneratedKeys="true" keyProperty="listId">
+    <insert id="postToDoList" useGeneratedKeys="true" keyProperty="calendarId">
         INSERT INTO todolist
-        (user_id, content, is_completed)
+        (user_id, pet_id, title, content, start_date, start_time)
         VALUES
         (#{userId}, #{content}, 0)
     </insert>

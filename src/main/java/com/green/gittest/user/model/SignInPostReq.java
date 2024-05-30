@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class SignInPostReq {
-    @Schema(example = "example@naver.com", description = "유저 아이디", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(example = "example@naver.com", description = "유저 이메일", requiredMode = Schema.RequiredMode.REQUIRED)
     private String email;
-    @Schema(example = "1212", description = "유저 비밀번호", requiredMode = Schema.RequiredMode.REQUIRED)
-    private String upw;
+    @Schema(example = "abcd1234!@#$", description = "유저 비밀번호", requiredMode = Schema.RequiredMode.REQUIRED)
+    private String password;
 
 }

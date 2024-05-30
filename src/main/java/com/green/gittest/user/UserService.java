@@ -1,9 +1,5 @@
 package com.green.gittest.user;
 
-
-
-import com.green.gittest.common.CustomFileUtils;
-import com.green.gittest.common.GlobalChecker;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import com.green.gittest.user.model.*;
@@ -11,11 +7,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
-import java.util.regex.Pattern;
-import static com.green.gittest.common.GlobalConst.*;
 
 
 @RequiredArgsConstructor
@@ -23,10 +14,33 @@ import static com.green.gittest.common.GlobalConst.*;
 @Slf4j
 public class UserService {
     private final UserMapper mapper;
-    private final CustomFileUtils customFileUtils;
-    private final GlobalChecker check;
 
 
+
+    public int postSignUp(SignUpPostReq p) {
+        String hashedPw = BCrypt.hashpw(p.getPassword(), BCrypt.gensalt());
+        p.setPassword(hashedPw); // 유저 비밀번호 암호화
+        return mapper.postUser(p);
+    }
+
+
+    public SignInPostRes postSignIn(SignInPostReq p) {
+        User user = mapper.getUserById(p.getEmail());
+        if (user.getUserId() == 0) {
+            throw new UserNotFoundException(); // "존재하지 않는 아이디입니다."
+        } else if (!BCrypt.checkpw(p.getPassword(), user.getPassword())) {
+            throw new WrongValue(); // "비밀번호가 틀렸습니다."
+        }
+
+        return SignInPostRes.builder()
+                .userId(user.getUserId())
+                .nickname(user.getNickname())
+                .build();
+    }
+
+}
+
+/* 로그인 프로필 사진 있는 버전
     public int postSignUp(MultipartFile pic, SignUpPostReq p) {
         check.userSignUpChecker(p); // 회원가입 시 제한사항 확인함.
 
@@ -49,20 +63,4 @@ public class UserService {
         return mapper.postUser(p);
     }
 
-
-    public SignInPostRes postSignIn(SignInPostReq p) {
-        User user = mapper.getUserById(p.getEmail());
-        if (user == null) {
-            throw new UserNotFoundException("존재하지 않는 이메일입니다. : " + p.getEmail());
-        } else if (!BCrypt.checkpw(p.getUpw(), user.getUpw())) {
-            throw new WrongValue("Invalid password.");
-        }
-
-        return SignInPostRes.builder()
-                .userId(user.getUserId())
-                .nickname(user.getNickname())
-                .profilePic(user.getProfilePic())
-                .build();
-    }
-
-}
+ */

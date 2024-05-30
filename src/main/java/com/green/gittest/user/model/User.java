@@ -8,9 +8,8 @@ import lombok.Getter;
 public class User {
     private long userId;
     private String email;
-    private String upw;
+    private String password;
     private String nickname;
-    private String profilePic;
-    private String signUpDate;
-    private String profileUpdate;
+    private String createdAt;
+    private String updatedAt;
 }

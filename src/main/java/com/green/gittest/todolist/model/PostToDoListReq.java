@@ -2,26 +2,23 @@ package com.green.gittest.todolist.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PostToDoListReq {
     @JsonIgnore
     private long listId;
+    @Schema(example = "1", description = "유저 PK", requiredMode = Schema.RequiredMode.REQUIRED)
     private long userId;
-    private String title;
+    @Schema(example = "할 일 내용1234", description = "할 일 내용을 입력하세요", requiredMode = Schema.RequiredMode.REQUIRED)
     private String content;
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Schema(example = "2024-10-01", description = "시작 날짜", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    private Date startDate;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Schema(example = "2024-10-10", description = "마감 날짜", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    private Date deadlineDate;
-
-    private Boolean isCompleted;
-    private Boolean favorite;
+    @JsonIgnore
+    private int isCompleted;
 }

@@ -56,7 +56,8 @@ public class CustomFileUtils {
 
     //폴더 삭제                       "/user/3"
     public void deleteFolder(String absoluteFolderPath) { //D:\2024-01\download\greengram_ver3 상대 주소
-        File folder = new File(absoluteFolderPath);
+
+        File folder = new File(uploadPath+absoluteFolderPath);
         if(folder.exists() && folder.isDirectory()) {
             File[] files = folder.listFiles();
 
@@ -69,6 +70,7 @@ public class CustomFileUtils {
             }
             folder.delete();
         }
+        System.out.println(absoluteFolderPath);
     }
 
 }
