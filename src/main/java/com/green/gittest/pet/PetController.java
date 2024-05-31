@@ -26,6 +26,7 @@ public class PetController {
         log.info("p: {}", p);
         if (petImage == null || p == null) throw new NullPointerException();
 
+
         PostPetRes result = service.postPet(petImage, p);
         return ResultDto.resultDto(HttpStatus.OK, "정보 등록 완료", result);
     }
