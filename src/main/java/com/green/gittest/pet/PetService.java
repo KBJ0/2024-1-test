@@ -19,8 +19,9 @@ public class PetService {
     private final CustomFileUtils customFileUtils;
 
     public PostPetRes postPet(MultipartFile petImage, PostPetReq p){
-        mapper.postPet(p);
+
         if (petImage == null || petImage.isEmpty()) {
+            mapper.postPet(p);
             return PostPetRes.builder().petId(p.getPetId()).build();
         }
         String path = String.format("pet/%d", p.getPetId());
@@ -35,7 +36,8 @@ public class PetService {
             throw new RuntimeException("파일 저장 중 오류가 발생했습니다.", e);
         }
         p.setPetImage(saveFileName);
-        // 사진 정보 DB 및 폴더에 저장.
+
+        mapper.postPet(p);
         return PostPetRes.builder().petId(p.getPetId()).petImage(saveFileName).build();
         // 프론트가 없는 정보만 가져다 주기.
     }
@@ -47,8 +49,8 @@ public class PetService {
     }
 
     public UpdatePetRes updatePet(MultipartFile petImage, UpdatePetReq p) {
-        mapper.updatePet(p);
         if (petImage == null || petImage.isEmpty()) {
+            mapper.updatePet(p);
             return null;
         }
         String path = String.format("pet/%d", p.getPetId());
@@ -64,7 +66,8 @@ public class PetService {
             log.error("파일 전송 중 오류 발생", e);
             throw new RuntimeException("파일 저장 중 오류가 발생했습니다.", e);
         }
-        p.setPetImage(saveFileName); // 사진 정보를 DB 업데이트 및 폴더에 저장.
+        p.setPetImage(saveFileName);
+        mapper.updatePet(p);
         return UpdatePetRes.builder().petImage(saveFileName).build();
     }
 
