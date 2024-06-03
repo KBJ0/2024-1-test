@@ -11,5 +11,4 @@ public class GetPetRes {
     private String petIcon;
     private String petBackColor;
     private String createdAt;
-    private String updatedAt;
 }

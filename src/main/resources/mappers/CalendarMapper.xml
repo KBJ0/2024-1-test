@@ -32,7 +32,6 @@
     <update id="updateCalendar">
         UPDATE calendar
         SET
-        user_id = #{userId},
         pet_id = #{petId},
         title = #{title},
         content = #{content},
@@ -41,7 +40,6 @@
         WHERE
         calendar_id = #{calendarId}
     </update>
-
 
     <delete id ="deleteCalendar">
         DELETE from calendar

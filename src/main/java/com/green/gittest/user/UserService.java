@@ -15,18 +15,15 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserMapper mapper;
 
-
-
     public int postSignUp(SignUpPostReq p) {
         String hashedPw = BCrypt.hashpw(p.getPassword(), BCrypt.gensalt());
         p.setPassword(hashedPw); // 유저 비밀번호 암호화
         return mapper.postUser(p);
     }
 
-
     public SignInPostRes postSignIn(SignInPostReq p) {
-        User user = mapper.getUserById(p.getEmail());
-        if (user.getUserId() == 0) {
+        User user = mapper.getUserByEmail(p.getEmail());
+        if (user == null) {
             throw new UserNotFoundException(); // "존재하지 않는 아이디입니다."
         } else if (!BCrypt.checkpw(p.getPassword(), user.getPassword())) {
             throw new WrongValue(); // "비밀번호가 틀렸습니다."

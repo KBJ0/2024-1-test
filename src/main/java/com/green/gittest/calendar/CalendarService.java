@@ -19,13 +19,11 @@ public class CalendarService {
     }
 
     public List<GetCalendarRes> getCalendarFromUserId(long userId){
-        List<GetCalendarRes> result = mapper.getCalendarFromUserId(userId);
-        return result;
+        return mapper.getCalendarFromUserId(userId);
     }
 
     public List<GetCalendarRes> getCalendarFromPetId(long petId){
-        List<GetCalendarRes> result = mapper.getCalendarFromPetId(petId);
-        return result;
+        return mapper.getCalendarFromPetId(petId);
     }
 
     public int updateCalendar(UpdateCalendarReq p){

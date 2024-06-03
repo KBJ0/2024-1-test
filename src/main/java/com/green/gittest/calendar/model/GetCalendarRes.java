@@ -9,6 +9,7 @@ import java.util.Date;
 
 @Data
 public class GetCalendarRes {
+    private long calendarId;
     private long userId;
     private long petId;
     private String title;

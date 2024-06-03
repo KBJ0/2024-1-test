@@ -10,9 +10,7 @@ import java.util.List;
 @Mapper
 public interface PetMapper {
     int postPet(PostPetReq p);
-    int updatePet(UpdatePetReq p);
-
     List<GetPetRes> getPetForUserId(Long userId);
-
+    int updatePet(UpdatePetReq p);
     int deletePet(Long petId);
 }

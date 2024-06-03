@@ -9,28 +9,30 @@
         (#{userId}, #{petName}, #{petCategory}, #{petImage}, #{petIcon}, #{petBackColor})
     </insert>
 
+    <select id="getPetNameList">
+        SELECT  pet_id AS petId,
+                pet_name AS petName
+        FROM pet
+        WHERE user_id = #{userId}
+    </select>
+
     <select id="getPetForUserId">
         SELECT
         pet_id AS petId, pet_name AS petName, pet_category AS petCategory
         , pet_image AS petImage, pet_icon AS petIcon, pet_back_color AS petBackColor
-        , created_at AS createdAt, updated_at AS updatedAt
-        FROM
-        pet
-        WHERE
-        user_id = #{userId}
+        , created_at AS createdAt
+        FROM pet
+        WHERE user_id = #{userId}
     </select>
 
     <update id="updatePet">
         UPDATE pet
-        SET
-        user_id = #{userId},
-        pet_name = #{petName},
-        pet_category = #{petCategory},
-        pet_image = #{petImage},
-        pet_icon = #{petIcon},
-        pet_back_color = #{petBackColor}
-        WHERE
-        pet_id = #{petId}
+        SET pet_name = #{petName},
+            pet_category = #{petCategory},
+            pet_image = #{petImage},
+            pet_icon = #{petIcon},
+            pet_back_color = #{petBackColor}
+        WHERE pet_id = #{petId}
     </update>
 
     <delete id ="deletePet">

@@ -4,30 +4,25 @@
 
     <insert id="postToDoList" useGeneratedKeys="true" keyProperty="listId">
         INSERT INTO todolist
-        (user_id, content, is_completed)
+        (user_id, content)
         VALUES
-        (#{userId}, #{content}, 0)
+        (#{userId}, #{content})
     </insert>
 
     <select id="getToDoListByUserIdForRead">
         SELECT
-        list_id AS listID, user_id AS userId, content
+        list_id AS listId, user_id AS userId, content
         , is_completed AS isCompleted, created_at AS createdAt, updated_at AS updatedAt
         FROM
         todolist
         WHERE
         user_id = #{userId}
+        ORDER BY list_id DESC
     </select>
 
     <update id="updateToDoListContent">
         UPDATE todolist
         SET content = #{content}
-        WHERE list_id = #{listId}
-    </update>
-
-    <update id="updateToDoListIsCompleted">
-        UPDATE todolist
-        SET is_completed = CASE WHEN is_completed = 0 THEN 1 ELSE 0 END
         WHERE list_id = #{listId}
     </update>
 

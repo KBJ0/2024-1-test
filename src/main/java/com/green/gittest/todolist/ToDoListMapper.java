@@ -7,11 +7,7 @@ import java.util.List;
 @Mapper
 public interface ToDoListMapper {
     int postToDoList(PostToDoListReq p);
-
     List<GetToDoListRes> getToDoListByUserIdForRead(long userId);
-
-    int updateToDoListContent(String content,long listId);
-    int updateToDoListIsCompleted(long listId);
-
+    int updateToDoListContent(UpdateToDoListReq p);
     int deleteToDoList(long listId);
 }

@@ -18,16 +18,11 @@ public class ToDoListService {
     }
 
     public List<GetToDoListRes> getToDoList(Long userId) {
-        List<GetToDoListRes> res = mapper.getToDoListByUserIdForRead(userId);
-        if(res == null || res.isEmpty()){return null;}
-        return res;
+        return mapper.getToDoListByUserIdForRead(userId);
     }
 
     public int updateToDoList(UpdateToDoListReq p) {
-       if (p.getIsCompleted() == 1){
-           return mapper.updateToDoListIsCompleted(p.getListId());
-       }
-        return mapper.updateToDoListContent(p.getContent(),p.getListId());
+        return mapper.updateToDoListContent(p);
     }
 
     public int deleteToDoList(Long listId) {

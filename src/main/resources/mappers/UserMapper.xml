@@ -9,7 +9,7 @@
         , nickname = #{nickname}
     </insert>
 
-    <select id="getUserById">
+    <select id="getUserByEmail">
         SELECT user_id AS userId, email, password, nickname
         , created_at AS createdAt, updated_at AS updatedAt
         FROM user

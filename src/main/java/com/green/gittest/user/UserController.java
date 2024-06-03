@@ -34,7 +34,6 @@ public class UserController {
         return ResultDto.resultDto(HttpStatus.OK,"회원가입 성공",result);
     }
 
-
     @PostMapping("sign-in")
     @Operation(summary = "인증처리", description = "")
     public ResultDto<SignInPostRes> postSignIn(@RequestBody SignInPostReq p) {
