@@ -1,0 +1,1515 @@
+[2024-05-31 00:02:34 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.11 with PID 9956 (C:\Users\BJ\Desktop\자바\2024-1-test\build\classes\java\main started by BJ in C:\Users\BJ\Desktop\자바\2024-1-test)[0;39m
+[2024-05-31 00:02:34 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 00:02:34 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 00:02:34 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 887 ms[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2fc74cd3[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 00:02:35 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 1.899 seconds (process running for 2.205)[0;39m
+[2024-05-31 00:02:36 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:02:36 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:02:36 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
+[2024-05-31 00:02:42 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 1
+ {executed in 2 msec}[0;39m
+[2024-05-31 00:02:42 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|2        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:02:45 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 3
+ {executed in 7 msec}[0;39m
+[2024-05-31 00:02:45 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:02:48 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 5
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:02:48 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:02:53 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 00:02:53 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.11 with PID 6392 (C:\Users\BJ\Desktop\자바\2024-1-test\build\classes\java\main started by BJ in C:\Users\BJ\Desktop\자바\2024-1-test)[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 00:06:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 906 ms[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2f821baf[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 00:06:50 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 1.925 seconds (process running for 2.236)[0;39m
+[2024-05-31 00:06:51 [32mINFO [0;39m RMI TCP Connection(2)-192.168.219.100] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:06:51 [32mINFO [0;39m RMI TCP Connection(2)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:06:51 [32mINFO [0;39m RMI TCP Connection(2)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-31 00:06:52 [32mINFO [0;39m http-nio-8080-exec-4] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 256 ms[0;39m
+[2024-05-31 00:06:55 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 5
+ {executed in 2 msec}[0;39m
+[2024-05-31 00:06:55 [32mINFO [0;39m http-nio-8080-exec-5] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:06 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 7 msec}[0;39m
+[2024-05-31 00:07:06 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:06 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|1         |
+|----------|
+[0;39m
+[2024-05-31 00:07:07 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 00:07:07 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:07 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+[0;39m
+[2024-05-31 00:07:07 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 00:07:07 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:07 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|3         |
+|----------|
+[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 16 msec}[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:08 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|4         |
+|----------|
+[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:08 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|5         |
+|----------|
+[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 00:07:08 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|6         |
+|----------|
+[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 00:07:08 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:08 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|7         |
+|----------|
+[0;39m
+[2024-05-31 00:07:20 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:20 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:25 [33mWARN [0;39m http-nio-8080-exec-4] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'p' for method parameter type Object is not present][0;39m
+[2024-05-31 00:07:29 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:29 [32mINFO [0;39m http-nio-8080-exec-5] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:31 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:31 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:33 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 1 msec}[0;39m
+[2024-05-31 00:07:33 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:39 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 00:07:39 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 00:07:47 [33mWARN [0;39m http-nio-8080-exec-10] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request][0;39m
+[2024-05-31 00:08:50 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 00:08:50 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-31 00:08:52 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.11 with PID 5196 (C:\Users\BJ\Desktop\자바\2024-1-test\build\classes\java\main started by BJ in C:\Users\BJ\Desktop\자바\2024-1-test)[0;39m
+[2024-05-31 00:08:52 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 00:08:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 00:08:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 873 ms[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2f89e2e3[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 00:08:53 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 1.9 seconds (process running for 2.207)[0;39m
+[2024-05-31 00:08:54 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:08:54 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 00:08:54 [32mINFO [0;39m RMI TCP Connection(1)-192.168.219.100] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
+[2024-05-31 00:08:54 [32mINFO [0;39m http-nio-8080-exec-5] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 255 ms[0;39m
+[2024-05-31 00:08:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE from main_banner
+        where image_id = 4
+ {executed in 6 msec}[0;39m
+[2024-05-31 00:09:02 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE from main_banner
+        where image_id = 444
+ {executed in 1 msec}[0;39m
+[2024-05-31 00:09:08 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 00:09:08 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-31 09:11:08 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.10 with PID 12012 (D:\KBJ\BackEnd\2024-1-test\build\classes\java\main started by Administrator in D:\KBJ\BackEnd\2024-1-test)[0;39m
+[2024-05-31 09:11:08 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 09:11:08 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 09:11:08 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1174 ms[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@160091da[0;39m
+[2024-05-31 09:11:09 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 09:11:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 09:11:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 09:11:10 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 09:11:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 09:11:10 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 2.847 seconds (process running for 3.301)[0;39m
+[2024-05-31 09:11:11 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.161] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 09:11:11 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 09:11:11 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-31 09:12:57 [32mINFO [0;39m http-nio-8080-exec-7] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 254 ms[0;39m
+[2024-05-31 09:13:06 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 8 msec}[0;39m
+[2024-05-31 09:13:06 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:06 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|1         |
+|----------|
+[0;39m
+[2024-05-31 09:13:07 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:13:07 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:07 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:08 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|3         |
+|----------|
+[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:08 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|4         |
+|----------|
+[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:08 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|5         |
+|----------|
+[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:08 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|6         |
+|----------|
+[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:13:08 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO main_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:13:08 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|7         |
+|----------|
+[0;39m
+[2024-05-31 09:13:15 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:13:15 [32mINFO [0;39m http-nio-8080-exec-5] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 09:13:23 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE from main_banner
+        where image_id = 2
+ {executed in 8 msec}[0;39m
+[2024-05-31 09:14:22 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:22 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:22 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:22 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|1         |
+|----------|
+[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 6 msec}[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|3         |
+|----------|
+[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|4         |
+|----------|
+[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|5         |
+|----------|
+[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:24 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:24 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|6         |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-5] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|7         |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|8         |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|9         |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 2 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|10        |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|11        |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|12        |
+|----------|
+[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.calendar.CalendarController] [36mp: PostCalendarReq(calendarId=0, userId=1, petId=1, title=string, content=string, startDate=Thu May 30 09:00:00 KST 2024, startTime=12:00:00)[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 1 msec}[0;39m
+[2024-05-31 09:14:25 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO calendar
+        (user_id, pet_id, title, content, start_date, start_time)
+        VALUES
+        (1, 1, 'string', 'string', '05/30/2024 09:00:00.000', '01/01/1970 12:00:00.000')
+ {executed in 0 msec}[0;39m
+[2024-05-31 09:14:25 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|13        |
+|----------|
+[0;39m
+[2024-05-31 09:37:53 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 09:37:53 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-31 14:30:10 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.10 with PID 14568 (D:\KBJ\BackEnd\2024-1-test\build\classes\java\main started by Administrator in D:\KBJ\BackEnd\2024-1-test)[0;39m
+[2024-05-31 14:30:10 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 14:30:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 14:30:10 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 981 ms[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@65d83ede[0;39m
+[2024-05-31 14:30:11 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 2.25 seconds (process running for 2.629)[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.161] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 14:30:12 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 2 ms[0;39m
+[2024-05-31 14:30:14 [32mINFO [0;39m http-nio-8080-exec-3] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 284 ms[0;39m
+[2024-05-31 14:30:26 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=example@naver.com, password=abcd1234!@#$, checkPassword=abcd1234!@#$, nickname=홍길동)[0;39m
+[2024-05-31 14:30:26 [33mWARN [0;39m http-nio-8080-exec-4] [org.mariadb.jdbc.message.server.ErrorPacket] [36mError: 1062-23000: Duplicate entry 'example@naver.com' for key 'email'[0;39m
+[2024-05-31 14:30:26 [31mERROR[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO user
+        SET email = 'example@naver.com'
+        , password = '$2a$10$LXxjxAJjdBXnAbxeNCd5Ou1keGz5oh/.LkV.QGGncV7YB61zQnDJG'
+        , nickname = '홍길동'
+ {FAILED after 7 msec}[0;39m
+java.sql.SQLIntegrityConstraintViolationException: (conn=14) Duplicate entry 'example@naver.com' for key 'email'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:297)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy4/jdk.proxy4.$Proxy110.postUser(Unknown Source)
+	at com.green.gittest.user.UserService.postSignUp(UserService.java:23)
+	at com.green.gittest.user.UserController.postUser(UserController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-05-31 14:30:26 [33mWARN [0;39m http-nio-8080-exec-4] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.dao.DuplicateKeyException: <EOL><EOL>### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=14) Duplicate entry 'example@naver.com' for key 'email'<EOL><EOL>### The error may exist in file [D:\KBJ\BackEnd\2024-1-test\build\resources\main\mappers\UserMapper.xml]<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: INSERT INTO user         SET email = ?         , password = ?         , nickname = ?<EOL><EOL>### Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=14) Duplicate entry 'example@naver.com' for key 'email'<EOL>; (conn=14) Duplicate entry 'example@naver.com' for key 'email'][0;39m
+[2024-05-31 14:30:34 [32mINFO [0;39m http-nio-8080-exec-5] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=example@naver.com, password=abc32d1234!@#$, checkPassword=abcd1234!@#$, nickname=홍길동)[0;39m
+[2024-05-31 14:30:42 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.user.UserController] [36mp: SignUpPostReq(userId=0, email=example@naver.com, password=abc32d1234!@#$, checkPassword=abcd1234!@#$, nickname=홍길32동)[0;39m
+[2024-05-31 14:31:06 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.gittest.user.UserController] [36mp: SignInPostReq(email=example@naver.com, password=abcd1234!@#$)[0;39m
+[2024-05-31 14:31:06 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT user_id AS userId, email, password, nickname
+        , created_at AS createdAt, updated_at AS updatedAt
+        FROM user
+        WHERE email = 'example@naver.com'
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:31:06 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+|user_id |email             |password                                                     |nickname |created_at          |updated_at |
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+|1       |example@naver.com |$2a$10$SqFelXFoFWyszeHdSAnIZ.LG0ir2buLT0DEV3LdUqpSrCgwW1.Hrq |홍길동      |2024-05-30 17:48:33 |null       |
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+[0;39m
+[2024-05-31 14:31:10 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.gittest.user.UserController] [36mp: SignInPostReq(email=exampl212121e@naver.com, password=abcd1234!@#$)[0;39m
+[2024-05-31 14:31:10 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT user_id AS userId, email, password, nickname
+        , created_at AS createdAt, updated_at AS updatedAt
+        FROM user
+        WHERE email = 'exampl212121e@naver.com'
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:31:10 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|--------|------|---------|---------|-----------|-----------|
+|user_id |email |password |nickname |created_at |updated_at |
+|--------|------|---------|---------|-----------|-----------|
+|--------|------|---------|---------|-----------|-----------|
+[0;39m
+[2024-05-31 14:31:10 [33mWARN [0;39m http-nio-8080-exec-8] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [java.lang.NullPointerException: Cannot invoke "com.green.gittest.user.model.User.getUserId()" because "user" is null][0;39m
+[2024-05-31 14:31:17 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.gittest.user.UserController] [36mp: SignInPostReq(email=example@naver.com, password=!@#$)[0;39m
+[2024-05-31 14:31:17 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT user_id AS userId, email, password, nickname
+        , created_at AS createdAt, updated_at AS updatedAt
+        FROM user
+        WHERE email = 'example@naver.com'
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:31:17 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+|user_id |email             |password                                                     |nickname |created_at          |updated_at |
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+|1       |example@naver.com |$2a$10$SqFelXFoFWyszeHdSAnIZ.LG0ir2buLT0DEV3LdUqpSrCgwW1.Hrq |홍길동      |2024-05-30 17:48:33 |null       |
+|--------|------------------|-------------------------------------------------------------|---------|--------------------|-----------|
+[0;39m
+[2024-05-31 14:31:17 [33mWARN [0;39m http-nio-8080-exec-9] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [com.green.gittest.common.myexception.WrongValue][0;39m
+[2024-05-31 14:37:05 [32mINFO [0;39m http-nio-8080-exec-5] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 122 ms[0;39m
+[2024-05-31 14:37:15 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.todolist.ToDoListController] [36mp: PostToDoListReq(listId=0, userId=1, content=할 2334, isCompleted=0)[0;39m
+[2024-05-31 14:37:15 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO todolist
+        (user_id, content, is_completed)
+        VALUES
+        (1, '할 2334', 0)
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:37:15 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO todolist
+        (user_id, content, is_completed)
+        VALUES
+        (1, '할 2334', 0)
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:37:15 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|6         |
+|----------|
+[0;39m
+[2024-05-31 14:37:53 [33mWARN [0;39m http-nio-8080-exec-7] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries][0;39m
+[2024-05-31 14:39:59 [32mINFO [0;39m http-nio-8080-exec-3] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 127 ms[0;39m
+[2024-05-31 14:40:02 [33mWARN [0;39m http-nio-8080-exec-5] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries][0;39m
+[2024-05-31 14:40:07 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.todolist.ToDoListController] [36mp: UpdateToDoListReq(listId=6, content=null, isCompleted=1)[0;39m
+[2024-05-31 14:40:07 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE todolist
+        SET is_completed = CASE WHEN is_completed = 0 THEN 1 ELSE 0 END
+        WHERE list_id = 6
+ {executed in 3 msec}[0;39m
+[2024-05-31 14:41:16 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.todolist.ToDoListController] [36mp: UpdateToDoListReq(listId=6, content=null, isCompleted=1)[0;39m
+[2024-05-31 14:41:16 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE todolist
+        SET is_completed = CASE WHEN is_completed = 0 THEN 1 ELSE 0 END
+        WHERE list_id = 6
+ {executed in 5 msec}[0;39m
+[2024-05-31 14:41:18 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.todolist.ToDoListController] [36mp: UpdateToDoListReq(listId=6, content=null, isCompleted=1)[0;39m
+[2024-05-31 14:41:18 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE todolist
+        SET is_completed = CASE WHEN is_completed = 0 THEN 1 ELSE 0 END
+        WHERE list_id = 6
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:41:27 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.todolist.ToDoListController] [36mp: UpdateToDoListReq(listId=6, content=수정할 내용1234, isCompleted=0)[0;39m
+[2024-05-31 14:41:27 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE todolist
+        SET content = '수정할 내용1234'
+        WHERE list_id = 6
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:42:50 [32mINFO [0;39m http-nio-8080-exec-8] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 107 ms[0;39m
+[2024-05-31 14:43:10 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5939ed1c[0;39m
+[2024-05-31 14:43:10 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=9007199254740991, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 14:43:10 [33mWARN [0;39m http-nio-8080-exec-10] [org.mariadb.jdbc.message.server.ErrorPacket] [36mError: 1452-23000: Cannot add or update a child row: a foreign key constraint fails (`gittest`.`pet`, CONSTRAINT `pet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`))[0;39m
+[2024-05-31 14:43:10 [31mERROR[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (9007199254740991, 'string', 'string', 'string', 'string', 'string')
+ {FAILED after 4 msec}[0;39m
+java.sql.SQLIntegrityConstraintViolationException: (conn=14) Cannot add or update a child row: a foreign key constraint fails (`gittest`.`pet`, CONSTRAINT `pet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`))
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:297)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy101.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy4/jdk.proxy4.$Proxy106.postPet(Unknown Source)
+	at com.green.gittest.pet.PetService.postPet(PetService.java:22)
+	at com.green.gittest.pet.PetController.postPet(PetController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-05-31 14:43:10 [33mWARN [0;39m http-nio-8080-exec-10] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.dao.DataIntegrityViolationException: <EOL><EOL>### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=14) Cannot add or update a child row: a foreign key constraint fails (`gittest`.`pet`, CONSTRAINT `pet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`))<EOL><EOL>### The error may exist in file [D:\KBJ\BackEnd\2024-1-test\build\resources\main\mappers\PetMapper.xml]<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: INSERT INTO pet         (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)         VALUES         (?, ?, ?, ?, ?, ?)<EOL><EOL>### Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=14) Cannot add or update a child row: a foreign key constraint fails (`gittest`.`pet`, CONSTRAINT `pet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`))<EOL>; (conn=14) Cannot add or update a child row: a foreign key constraint fails (`gittest`.`pet`, CONSTRAINT `pet_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`))][0;39m
+[2024-05-31 14:43:27 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@4db8bd5c[0;39m
+[2024-05-31 14:43:27 [32mINFO [0;39m http-nio-8080-exec-1] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 14:43:27 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 7 msec}[0;39m
+[2024-05-31 14:43:27 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:43:27 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|13        |
+|----------|
+[0;39m
+[2024-05-31 14:43:30 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@6b590cde[0;39m
+[2024-05-31 14:43:30 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 14:43:30 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 14:43:30 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:43:30 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|14        |
+|----------|
+[0;39m
+[2024-05-31 14:43:31 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@115e9278[0;39m
+[2024-05-31 14:43:31 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 14:43:31 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:43:31 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', 'string', 'string', 'string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:43:31 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|15        |
+|----------|
+[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 10 class path changes (0 additions, 0 deletions, 10 modifications)[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m Thread-6] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m Thread-6] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m Thread-6] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.10 with PID 14568 (D:\KBJ\BackEnd\2024-1-test\build\classes\java\main started by Administrator in D:\KBJ\BackEnd\2024-1-test)[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 291 ms[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Starting...[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6306bce5[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Start completed.[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 0.526 seconds (process running for 886.122)[0;39m
+[2024-05-31 14:44:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-05-31 14:46:18 [32mINFO [0;39m http-nio-8080-exec-4] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 14:46:18 [32mINFO [0;39m http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 14:46:18 [32mINFO [0;39m http-nio-8080-exec-4] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-31 14:46:18 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5a863646[0;39m
+[2024-05-31 14:46:18 [32mINFO [0;39m http-nio-8080-exec-4] [com.green.gittest.pet.PetController] [36mp: UpdatePetReq(petId=15, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 14:46:18 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. UPDATE pet
+        SET
+        user_id = 11,
+        pet_name = 'string',
+        pet_category = 'string',
+        pet_image = 'string',
+        pet_icon = 'string',
+        pet_back_color = 'string'
+        WHERE
+        pet_id = 15
+ {executed in 1 msec}[0;39m
+[2024-05-31 14:46:45 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.gittest.pet.PetController] [36muserId: 1[0;39m
+[2024-05-31 14:46:45 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+        pet_id AS petId, pet_name AS petName, pet_category AS petCategory
+        , pet_image AS petImage, pet_icon AS petIcon, pet_back_color AS petBackColor
+        , created_at AS createdAt, updated_at AS updatedAt
+        FROM
+        pet
+        WHERE
+        user_id = 1
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:46:45 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|-------|---------|-------------|-----------------------------------------|---------|---------------|--------------------|-----------|
+|pet_id |pet_name |pet_category |pet_image                                |pet_icon |pet_back_color |created_at          |updated_at |
+|-------|---------|-------------|-----------------------------------------|---------|---------------|--------------------|-----------|
+|1      |string   |string       |ea245049-d917-4496-b64b-be062d1b006a.jpg |string   |string         |2024-05-30 17:58:09 |null       |
+|2      |string   |string       |40080786-942d-41e1-b98c-2eac45a2a4f3.jpg |string   |string         |2024-05-30 17:58:25 |null       |
+|3      |string   |string       |dd914d88-b2eb-4f6f-afd3-04ab3c2d347d.jpg |string   |string         |2024-05-30 18:01:13 |null       |
+|4      |string   |string       |22a52091-81a6-4f07-acdb-beec8c65c46c.jpg |string   |string         |2024-05-30 18:01:16 |null       |
+|5      |string   |string       |04f9ed43-fc70-4de7-9d29-bada60fc1c94.jpg |string   |string         |2024-05-30 18:06:37 |null       |
+|6      |string   |string       |aede33fe-f6b7-485f-be65-115faf419fa3.jpg |string   |string         |2024-05-30 18:06:38 |null       |
+|7      |string   |string       |6c9a1270-df41-436f-9ed8-9ec78d356902.jpg |string   |string         |2024-05-30 18:06:39 |null       |
+|8      |string   |string       |6208ee0c-04d6-4a23-8e64-db2e66bd9f5c.png |string   |string         |2024-05-30 19:55:35 |null       |
+|9      |string   |string       |string                                   |string   |string         |2024-05-30 20:00:09 |null       |
+|-------|---------|-------------|-----------------------------------------|---------|---------------|--------------------|-----------|
+[0;39m
+[2024-05-31 14:48:07 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:48:07 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+11. getGeneratedKeys on query: INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:07 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|1         |
+|----------|
+[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+11. getGeneratedKeys on query: INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:09 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|2         |
+|----------|
+[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+11. getGeneratedKeys on query: INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:09 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|3         |
+|----------|
+[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+11. getGeneratedKeys on query: INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:09 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|4         |
+|----------|
+[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 14:48:09 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+11. getGeneratedKeys on query: INSERT INTO event_banner
+        (image_url)
+        VALUES
+        ('string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:09 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|5         |
+|----------|
+[0;39m
+[2024-05-31 14:48:22 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 1
+ {executed in 1 msec}[0;39m
+[2024-05-31 14:48:22 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 14:48:24 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        event_banner
+        ORDER BY image_id
+        LIMIT 0, 2
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:24 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|2        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 14:48:35 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:35 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 14:48:40 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+        image_id AS imageId, image_url AS imageUrl
+        FROM
+        main_banner
+ {executed in 0 msec}[0;39m
+[2024-05-31 14:48:40 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|---------|----------|
+|image_id |image_url |
+|---------|----------|
+|1        |string    |
+|3        |string    |
+|4        |string    |
+|5        |string    |
+|6        |string    |
+|7        |string    |
+|---------|----------|
+[0;39m
+[2024-05-31 14:48:56 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown initiated...[0;39m
+[2024-05-31 14:48:56 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown completed.[0;39m
+[2024-05-31 15:33:24 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarting GitTestApplication using Java 17.0.10 with PID 10832 (D:\KBJ\BackEnd\2024-1-test\build\classes\java\main started by Administrator in D:\KBJ\BackEnd\2024-1-test)[0;39m
+[2024-05-31 15:33:24 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-31 15:33:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-31 15:33:24 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 992 ms[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@75b73867[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-31 15:33:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m restartedMain] [com.green.gittest.GitTestApplication] [36mStarted GitTestApplication in 2.185 seconds (process running for 2.549)[0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m RMI TCP Connection(2)-192.168.0.161] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m RMI TCP Connection(2)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-31 15:33:26 [32mINFO [0;39m RMI TCP Connection(2)-192.168.0.161] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-31 15:33:43 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@28e76ae3[0;39m
+[2024-05-31 15:33:43 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 15:33:43 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '1b154343-fb07-4b61-9865-ca3e527fcee6.webp', 'string', 'string')
+ {executed in 7 msec}[0;39m
+[2024-05-31 15:33:43 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '1b154343-fb07-4b61-9865-ca3e527fcee6.webp', 'string', 'string')
+ {executed in 1 msec}[0;39m
+[2024-05-31 15:33:43 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|16        |
+|----------|
+[0;39m
+[2024-05-31 15:33:45 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@4cf1b0d8[0;39m
+[2024-05-31 15:33:45 [32mINFO [0;39m http-nio-8080-exec-6] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 15:33:45 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '2667012d-f660-496c-bfe5-147ec2805c79.webp', 'string', 'string')
+ {executed in 6 msec}[0;39m
+[2024-05-31 15:33:45 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '2667012d-f660-496c-bfe5-147ec2805c79.webp', 'string', 'string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 15:33:45 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|17        |
+|----------|
+[0;39m
+[2024-05-31 15:33:49 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@ce76931[0;39m
+[2024-05-31 15:33:49 [32mINFO [0;39m http-nio-8080-exec-7] [com.green.gittest.pet.PetController] [36mp: PostPetReq(petId=0, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 15:33:49 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '8636df8e-95ae-4684-bc48-2d53218f6db9.webp', 'string', 'string')
+ {executed in 2 msec}[0;39m
+[2024-05-31 15:33:49 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.getGeneratedKeys(ProxyStatement.java:229)
+1. getGeneratedKeys on query: INSERT INTO pet
+        (user_id, pet_name, pet_category, pet_image, pet_icon, pet_back_color)
+        VALUES
+        (11, 'string', 'string', '8636df8e-95ae-4684-bc48-2d53218f6db9.webp', 'string', 'string')
+ {executed in 0 msec}[0;39m
+[2024-05-31 15:33:49 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|----------|
+|insert_id |
+|----------|
+|18        |
+|----------|
+[0;39m
+[2024-05-31 15:34:04 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.gittest.pet.PetController] [36mpetImage: org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@768cc013[0;39m
+[2024-05-31 15:34:04 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.gittest.pet.PetController] [36mp: UpdatePetReq(petId=15, userId=11, petName=string, petCategory=string, petImage=string, petIcon=string, petBackColor=string)[0;39m
+[2024-05-31 15:34:04 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE pet
+        SET
+        user_id = 11,
+        pet_name = 'string',
+        pet_category = 'string',
+        pet_image = 'f5f6f91e-dde8-4c1d-ab98-faf4f757ecce.webp',
+        pet_icon = 'string',
+        pet_back_color = 'string'
+        WHERE
+        pet_id = 15
+ {executed in 2 msec}[0;39m
+[2024-05-31 15:34:08 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-31 15:34:08 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
