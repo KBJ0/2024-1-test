@@ -40,7 +40,7 @@ public class CalendarService {
     }
 
     public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(long petId){
-        if (petId == 0) throw new NullPointerException();
+        if(checkMapper.getPetId(petId) == 0) throw new PetNotFoundException();
         List<GetCalendarRes> list = mapper.getCalendarFromPetId(petId);
         String msg = "캘린더 불러오기 성공 verPetId";
 
@@ -49,6 +49,8 @@ public class CalendarService {
 
     public ResultDto<Integer> updateCalendar(UpdateCalendarReq p){
         if (p == null) throw new NullPointerException();
+        if(checkMapper.getUserId(p.getUserId()) == 0 ) throw new UserNotFoundException();
+        if(checkMapper.getPetId(p.getPetId()) == 0 ) throw new PetNotFoundException();
         mapper.updateCalendar(p);
         String msg = "캘린더 변경 완료";
 
@@ -57,6 +59,7 @@ public class CalendarService {
 
     public ResultDto<Integer> deleteCalendar(long calendarId){
         if (calendarId == 0) throw new NullPointerException();
+        if(checkMapper.getCalendarId(calendarId) == 0 ) throw new CalendarNotFoundException();
         mapper.deleteCalendar(calendarId);
         String msg = "특정 반려동물의 캘린더를 정상적으로 삭제하였습니다.";
 

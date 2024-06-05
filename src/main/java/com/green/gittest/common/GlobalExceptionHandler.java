@@ -87,4 +87,9 @@ public class GlobalExceptionHandler {
         return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "PetNotFoundException : 존재하지 않는 애완동물입니다.");
     }
 
+    //12. 캘린더 낫
+    @ExceptionHandler(CalendarNotFoundException.class)
+    public ResultDto<String> handleCalendarNotFoundException(CalendarNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "CalendarNotFoundException : 존재하지 않는 캘린더입니다.");
+    }
 }

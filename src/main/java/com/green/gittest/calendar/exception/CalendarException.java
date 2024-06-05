@@ -15,7 +15,7 @@ public class CalendarException {
     //1.널
     @ExceptionHandler(NullPointerException.class)
     public ResultDto<String> handleNullPointerException(NullPointerException ex) {
-        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "VF","모든 항목에 기입해주세요.");
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "VF","모든 필수 항목에 기입해주세요.");
     }
     //2.유저낫
     @ExceptionHandler(UserNotFoundException.class)

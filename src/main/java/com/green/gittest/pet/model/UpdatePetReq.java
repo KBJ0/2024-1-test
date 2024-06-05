@@ -6,7 +6,6 @@ import lombok.Data;
 @Data
 public class UpdatePetReq {
     private long petId;
-    private long userId;
     private String petName;
     private String petCategory;
     @JsonIgnore private String petImage;

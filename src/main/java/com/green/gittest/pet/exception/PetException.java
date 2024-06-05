@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class PetException {
     //1.널|2.유저낫|3.워링벨류|4.런타임|5.데이터인터걸|6.미싱|7.주소타입|8.사인업핸들러|9.메세지타입|
 
-//    //1.널
-//    @ExceptionHandler(NullPointerException.class)
-//    public ResultDto<String> handleNullPointerException(NullPointerException ex) {
-//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "P : 정보를 입력해주세요.");
-//    }
-//    //2.유저낫
-//    @ExceptionHandler(UserNotFoundException.class)
-//    public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
-//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "P : 존재하지 않는 아이디입니다.");
-//    }
+    //1.널
+    @ExceptionHandler(NullPointerException.class)
+    public ResultDto<String> handleNullPointerException(NullPointerException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST,"VF","모든 필수 항목에 기입해주세요.");
+    }
+    //2.유저낫
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST,"NU", "존재하지 않는 유저 입니다.");
+    }
 //    //3.워링벨류
 //    @ExceptionHandler(WrongValue.class)
 //    public ResultDto<String> handleWrongValueException(WrongValue ex) {

@@ -43,6 +43,7 @@ public class CalendarController {
     public ResultDto<Integer> updateCalendar(@RequestBody UpdateCalendarReq p){
         return service.updateCalendar(p);
     }
+
     @DeleteMapping
     @Operation(summary = "일정 삭제" , description = "등록된 일정을 삭제합니다")
     public ResultDto<Integer> deleteCalendar(@RequestParam Long calendarId){

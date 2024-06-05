@@ -3,6 +3,7 @@ package com.green.gittest.pet;
 import com.green.gittest.common.CustomFileUtils;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.pet.model.*;
+import jakarta.validation.constraints.Null;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class PetService {
     private final PetMapper mapper;
 //    private final CheckMapper checkMapper;
     private final CustomFileUtils customFileUtils;
+
 
     @Transactional
     public PostPetRes postPet(MultipartFile petImage, PostPetReq p){
