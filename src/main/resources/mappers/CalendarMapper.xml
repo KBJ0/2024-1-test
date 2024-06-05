@@ -15,7 +15,7 @@
         FROM calendar A
         JOIN pet B
         ON A.pet_id = B.pet_id
-        WHERE user_id = #{userId}
+        WHERE A.user_id = #{userId}
     </select>
 
     <select id="getCalendarFromPetId">
@@ -24,7 +24,7 @@
         FROM calendar A
         JOIN pet B
         ON A.pet_id = B.pet_id
-        WHERE pet_id = #{petId}
+        WHERE A.pet_id = #{petId}
     </select>
 
     <update id="updateCalendar">

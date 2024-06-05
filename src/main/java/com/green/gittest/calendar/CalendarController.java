@@ -30,16 +30,16 @@ public class CalendarController {
         return ResultDto.resultDto(HttpStatus.OK,"캘린더 작성 완료", result);
     }
 
-    @GetMapping("userId")
-    public ResultDto<List<GetCalendarRes>> getCalendarFromUserId(@RequestParam(name = "userId") Long userId){
+    @GetMapping("user_id")
+    public ResultDto<List<GetCalendarRes>> getCalendarFromUserId(@RequestParam(name="user_id") Long userId){
         log.info("userId: {}", userId);
         if (userId == null) throw new NullPointerException();
 
         List<GetCalendarRes> result = service.getCalendarFromUserId(userId);
         return ResultDto.resultDto(HttpStatus.OK,"캘린더 불러오기 성공 verUserid", result);
     }
-    @GetMapping("petId")
-    public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(@RequestParam(name = "petId") Long petId){
+    @GetMapping("pet_id")
+    public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(@RequestParam(name="pet_id") Long petId){
         log.info("petId: {}", petId);
         if (petId == null) throw new NullPointerException();
 
