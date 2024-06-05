@@ -22,6 +22,11 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    //redis 추가
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'javax.mail:mail:1.4.7'
+    implementation 'org.springframework:spring-context-support:5.3.9'
     implementation 'org.mindrot:jbcrypt:0.4'
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
