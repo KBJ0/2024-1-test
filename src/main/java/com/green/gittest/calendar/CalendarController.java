@@ -1,9 +1,10 @@
 package com.green.gittest.calendar;
 
-import com.green.gittest.calendar.model.GetCalendarRes;
+import com.green.gittest.calendar.model.*;
 import com.green.gittest.calendar.model.PostCalendarReq;
 import com.green.gittest.calendar.model.UpdateCalendarReq;
 import com.green.gittest.common.model.*;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,45 +23,30 @@ public class CalendarController {
     private final CalendarService service;
 
     @PostMapping
-    public ResultDto<Integer> postCalendar(@RequestBody PostCalendarReq p){
-        log.info("p: {}", p);
-        if (p == null) throw new NullPointerException();
-
-        int result = service.postCalendar(p);
-        return ResultDto.resultDto(HttpStatus.OK,"캘린더 작성 완료", result);
+    @Operation(summary = "일정 등록" , description = "추가할 일정을 작성합니다")
+    public ResultDto<PostCalendarRes> postCalendar(@RequestBody PostCalendarReq p){
+        return service.postCalendar(p);
     }
 
     @GetMapping("user_id")
+    @Operation(summary = "유저 일정 불러오기" , description = "로그인한 유저의 모든 일정을 불러옵니다.\n userId값은 로그인한 유저의 PK 값")
     public ResultDto<List<GetCalendarRes>> getCalendarFromUserId(@RequestParam(name="user_id") Long userId){
-        log.info("userId: {}", userId);
-        if (userId == null) throw new NullPointerException();
-
-        List<GetCalendarRes> result = service.getCalendarFromUserId(userId);
-        return ResultDto.resultDto(HttpStatus.OK,"캘린더 불러오기 성공 verUserid", result);
+        return service.getCalendarFromUserId(userId);
     }
     @GetMapping("pet_id")
+    @Operation(summary = "펫 별 일정 불러오기" , description = "선택된 펫의 일정을 불러옵니다. petId값은 펫의 PK 값")
     public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(@RequestParam(name="pet_id") Long petId){
-        log.info("petId: {}", petId);
-        if (petId == null) throw new NullPointerException();
-
-        List<GetCalendarRes> result = service.getCalendarFromPetId(petId);
-        return ResultDto.resultDto(HttpStatus.OK,"캘린더 불러오기 성공 verPetId", result);
+        return service.getCalendarFromPetId(petId);
     }
     @PatchMapping
+    @Operation(summary = "일정 수정" , description = "등록된 일정을 수정합니다")
     public ResultDto<Integer> updateCalendar(@RequestBody UpdateCalendarReq p){
-        log.info("p: {}", p);
-        if (p == null) throw new NullPointerException();
-
-        int result = service.updateCalendar(p);
-        return ResultDto.resultDto(HttpStatus.OK,"캘린더 변경 완료", result);
+        return service.updateCalendar(p);
     }
     @DeleteMapping
+    @Operation(summary = "일정 삭제" , description = "등록된 일정을 삭제합니다")
     public ResultDto<Integer> deleteCalendar(@RequestParam Long calendarId){
-        log.info("calendarId: {}", calendarId);
-        if (calendarId == null) throw new NullPointerException();
-
-        int result = service.deleteCalendar(calendarId);
-        return ResultDto.resultDto(HttpStatus.OK,"캘린더 삭제 완료", result);
+        return service.deleteCalendar(calendarId);
     }
 
 

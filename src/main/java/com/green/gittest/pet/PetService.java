@@ -17,10 +17,13 @@ import java.util.List;
 @Slf4j
 public class PetService {
     private final PetMapper mapper;
+//    private final CheckMapper checkMapper;
     private final CustomFileUtils customFileUtils;
 
     @Transactional
     public PostPetRes postPet(MultipartFile petImage, PostPetReq p){
+
+
         String saveFileName = customFileUtils.makeRandomFileName(petImage);
         p.setPetImage(saveFileName);
 
@@ -34,7 +37,7 @@ public class PetService {
             customFileUtils.transferTo(petImage, target); // 사진 이름 지정 후 파일에 저장
         } catch (IOException e) {
             log.error("파일 전송 중 오류 발생", e);
-            throw new RuntimeException("파일 저장 중 오류가 발생했습니다.", e);
+            throw new RuntimeException();
         }
 
         return PostPetRes.builder().petId(p.getPetId()).petImage(saveFileName).build();

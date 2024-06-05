@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class PostToDoListRes {
-    private long feedId;
+    private long listId;
 }

@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 public class ResultDto<T> {
 
     private HttpStatus statusCode;
+    private String resultCode;
     private String resultMsg;
     private T resultData;
 
@@ -18,4 +19,14 @@ public class ResultDto<T> {
     public static <T> ResultDto<T> resultDto(HttpStatus code, String msg) {
         return ResultDto.<T>builder().statusCode(code).resultMsg(msg).build();
     }
+
+    public static <T> ResultDto<T> resultDto(HttpStatus statusCode, String code, String msg) {
+        return ResultDto.<T>builder().statusCode(statusCode).resultCode(code).resultMsg(msg).build();
+    }
+    public static <T> ResultDto<T> resultDto(HttpStatus statusCode, String code, String msg, T data) {
+        return ResultDto.<T>builder().statusCode(statusCode).resultCode(code).resultMsg(msg).resultData(data).build();
+    }
+
+
+
 }

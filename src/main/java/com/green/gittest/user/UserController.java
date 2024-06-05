@@ -25,24 +25,28 @@ public class UserController {
     @Operation(summary = "회원가입", description = "프로필 사진은 필수가 아님")
     public ResultDto<Integer> postUser(@RequestBody SignUpPostReq p) {
         log.info("p: {}", p);
-        if(p == null) throw new NullPointerException(); // 값이 없으면 바로 결과를 줌.(서비스 미실행)
-        check.userSignUpChecker(p); // 회원가입 시 제한사항 확인함.
-        if(check.getErrorNumber() > 0){
-            return ResultDto.resultDto(HttpStatus.BAD_REQUEST,""+check.getErrorMassage(),check.getErrorNumber());}
-        // 2^0:이메일, 2^1:비밀번호, 2^2:비밀번호 확인, 2^3:닉네임 : %해서 홀수면 해당 에러확인 가능.
-        int result = service.postSignUp(p);
-        return ResultDto.resultDto(HttpStatus.OK,"회원가입 성공",result);
+
+        service.postSignUp(p);
+        return ResultDto.resultDto(HttpStatus.OK,"SU","회원가입 성공");
     }
+//if(p == null) throw new NullPointerException(); // 값이 없으면 바로 결과를 줌.(서비스 미실행)
+
+//      check.userSignUpChecker(p); // 회원가입 시 제한사항 확인함.
+//      if(check.getErrorNumber() > 0){
+//      return ResultDto.resultDto(HttpStatus.BAD_REQUEST,""+check.getErrorMassage(),check.getErrorNumber());}
+//      2^0:이메일, 2^1:비밀번호, 2^2:비밀번호 확인, 2^3:닉네임 : %해서 홀수면 해당 에러확인 가능.
+
 
     @PostMapping("sign-in")
     @Operation(summary = "인증처리", description = "")
     public ResultDto<SignInPostRes> postSignIn(@RequestBody SignInPostReq p) {
         log.info("p: {}", p);
-        if(p == null) throw new NullPointerException(); // 값이 없으면 바로 결과를 줌.(서비스 미실행)
         SignInPostRes result = service.postSignIn(p);
-        return ResultDto.resultDto(HttpStatus.OK,"로그인 성공",result);
+        return ResultDto.resultDto(HttpStatus.OK,"SU","로그인 성공",result);
     }
 }
+// if(p == null) throw new NullPointerException(); // 값이 없으면 바로 결과를 줌.(서비스 미실행)
+
 
 /* 로그인 프로필 사진 있는 버전.
   @PostMapping("sign-up")

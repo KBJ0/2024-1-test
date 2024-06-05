@@ -1,7 +1,7 @@
 package com.green.gittest.common;
 
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.common.myexception.SignUpException;
+import com.green.gittest.common.myexception.*;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.core.annotation.Order;
@@ -73,6 +73,18 @@ public class GlobalExceptionHandler {
     public ResultDto<String> HttpMessageNotReadableException(HttpMessageNotReadableException ex) {
         ex.printStackTrace();
         return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "HttpMessageNotReadableException : 입력 양식을 확인해주세요.");
+    }
+
+    //10.리스트 낫
+    @ExceptionHandler(ListNotFoundException.class)
+    public ResultDto<String> handleListNotFoundException(ListNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "ListNotFoundException : 존재하지 않는 리스트입니다.");
+    }
+
+    //11.펫 낫
+    @ExceptionHandler(PetNotFoundException.class)
+    public ResultDto<String> handlePetNotFoundException(PetNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "PetNotFoundException : 존재하지 않는 애완동물입니다.");
     }
 
 }

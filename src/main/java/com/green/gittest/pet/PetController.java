@@ -26,10 +26,8 @@ public class PetController {
             , @RequestPart PostPetReq p) {
         log.info("petImage: {}", petImage);
         log.info("p: {}", p);
-        if (petImage == null || p == null) throw new NullPointerException();
-
         PostPetRes result = service.postPet(petImage, p);
-        return ResultDto.resultDto(HttpStatus.OK, "정보 등록 완료", result);
+        return ResultDto.resultDto(HttpStatus.OK,"SU","반려동물 등록이 정상적으로 완료되었습니다.", result);
     }
 
     @GetMapping

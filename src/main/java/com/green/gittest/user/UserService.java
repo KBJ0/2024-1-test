@@ -22,12 +22,9 @@ public class UserService {
     }
 
     public SignInPostRes postSignIn(SignInPostReq p) {
-        User user = mapper.getUserByEmail(p.getEmail());
-        if (user == null) {
-            throw new UserNotFoundException(); // "존재하지 않는 아이디입니다."
-        } else if (!BCrypt.checkpw(p.getPassword(), user.getPassword())) {
-            throw new WrongValue(); // "비밀번호가 틀렸습니다."
-        }
+        User user = mapper.getUserByEmail(p.getEmail()); // 널포인트 뜨는가?
+        if (user == null || !BCrypt.checkpw(p.getPassword(), user.getPassword())) {
+            throw new UserNotFoundException();}
 
         return SignInPostRes.builder()
                 .userId(user.getUserId())

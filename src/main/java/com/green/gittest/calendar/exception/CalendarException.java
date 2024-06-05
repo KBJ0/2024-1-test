@@ -1,37 +1,31 @@
-package com.green.gittest.pet.exception;
+package com.green.gittest.calendar.exception;
 
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.common.myexception.SignUpException;
-import com.green.gittest.common.myexception.UserNotFoundException;
-import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.core.annotation.Order;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.web.HttpMediaTypeNotSupportedException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import com.green.gittest.common.myexception.*;
 
 @Order(1)
 @RestControllerAdvice(basePackages = "com.green.gittest.pet")
-public class PetException {
+public class CalendarException {
     //1.널|2.유저낫|3.워링벨류|4.런타임|5.데이터인터걸|6.미싱|7.주소타입|8.사인업핸들러|9.메세지타입|
 
-//    //1.널
-//    @ExceptionHandler(NullPointerException.class)
-//    public ResultDto<String> handleNullPointerException(NullPointerException ex) {
-//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "P : 정보를 입력해주세요.");
-//    }
-//    //2.유저낫
-//    @ExceptionHandler(UserNotFoundException.class)
-//    public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
-//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "P : 존재하지 않는 아이디입니다.");
-//    }
+    //1.널
+    @ExceptionHandler(NullPointerException.class)
+    public ResultDto<String> handleNullPointerException(NullPointerException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "VF","모든 항목에 기입해주세요.");
+    }
+    //2.유저낫
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.BAD_REQUEST,"NU", "존재하지 않는 유저 입니다.");
+    }
 //    //3.워링벨류
 //    @ExceptionHandler(WrongValue.class)
 //    public ResultDto<String> handleWrongValueException(WrongValue ex) {
-//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "P : 입력된 값이 맞지 않습니다.");
+//        return ResultDto.resultDto(HttpStatus.BAD_REQUEST, "Ca : 입력된 값이 맞지 않습니다.");
 //    }
     //4.런타임
     @ExceptionHandler(RuntimeException.class)
@@ -74,5 +68,10 @@ public class PetException {
 //        ex.printStackTrace();
 //        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "P : 입력 양식을 확인해주세요.");
 //    }
+    //11.펫 낫
+    @ExceptionHandler(PetNotFoundException.class)
+    public ResultDto<String> handlePetNotFoundException(PetNotFoundException ex) {
+        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "NP","존재하지 않는 반려동물 입니다.");
+    }
 
 }
