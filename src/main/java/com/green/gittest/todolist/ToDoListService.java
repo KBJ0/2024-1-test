@@ -29,6 +29,8 @@ public class ToDoListService {
         return mapper.deleteToDoList(listId);
     }
 
-
+    public int deleteAllTodoList(Long userId){
+        return mapper.deleteAllTodoList(userId);
+    }
 
 }

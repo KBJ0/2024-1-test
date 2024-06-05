@@ -50,7 +50,7 @@ public class PetController {
             , @RequestPart UpdatePetReq p) {
         log.info("petImage: {}", petImage);
         log.info("p: {}", p);
-        if (p == null) throw new NullPointerException();
+        if (p == null) throw new NullPointerException();  
 
         UpdatePetRes result = service.updatePet(petImage, p);
         return ResultDto.resultDto(HttpStatus.OK, "정보 수정 완료.", result);

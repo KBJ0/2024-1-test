@@ -43,8 +43,8 @@ public class ToDoListController {
         log.info("p: {}", p);
         if(p.getContent() == null || p.getContent().isEmpty()) throw new NullPointerException();
         int result = service.updateToDoList(p);
-        if(result == 0) return ResultDto.resultDto(HttpStatus.OK, "존재하지 않는 게시물입니다.", result);
-        return ResultDto.resultDto(HttpStatus.OK,"게시글 수정완료",result);
+        if(result == 0) return ResultDto.resultDto(HttpStatus.OK, "존재하지 않는 일정입니다.", result);
+        return ResultDto.resultDto(HttpStatus.OK,"일정 수정 완료",result);
     }
 
     @DeleteMapping
@@ -53,10 +53,18 @@ public class ToDoListController {
         log.info("listId: {}", listId);
         if(listId == null) throw new NullPointerException();
         int result = service.deleteToDoList(listId);
-        if (result == 0) return ResultDto.resultDto(HttpStatus.OK, "존재하지 않는 게시물입니다.", result);
-        return ResultDto.resultDto(HttpStatus.OK, "삭제 완료", result);
+        if (result == 0) return ResultDto.resultDto(HttpStatus.OK, "존재하지 않는 일정입니다.", result);
+        return ResultDto.resultDto(HttpStatus.OK, "일정 삭제 완료", result);
     }
 
-
+    @DeleteMapping("all-delete")
+    @Operation(summary = "완료된 일정 전체 삭제" , description = "userId는 로그인된 유저의 pk")
+    public ResultDto<Integer> deleteAllTodoList(@RequestParam(name ="userId") Long userId){
+        log.info("userId: {}", userId);
+        if(userId == null) throw new NullPointerException();
+        int result = service.deleteAllTodoList(userId);
+        if (result == 0) return ResultDto.resultDto(HttpStatus.OK, "삭제할 게시물이 존재하지 않습니다.", result);
+        return ResultDto.resultDto(HttpStatus.OK, "완료 일정 전체 삭제 완료", result);
+    }
 
 }

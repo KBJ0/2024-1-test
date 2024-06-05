@@ -10,13 +10,10 @@
     </insert>
 
     <select id="getToDoListByUserIdForRead">
-        SELECT
-        list_id AS listId, user_id AS userId, content
-        , is_completed AS isCompleted, created_at AS createdAt, updated_at AS updatedAt
-        FROM
-        todolist
-        WHERE
-        user_id = #{userId}
+        SELECT list_id AS listId, user_id AS userId, content, is_completed AS isCompleted
+                , created_at AS createdAt, updated_at AS updatedAt
+        FROM todolist
+        WHERE user_id = #{userId}
         ORDER BY list_id DESC
     </select>
 
@@ -29,6 +26,12 @@
     <delete id ="deleteToDoList">
         DELETE from todolist
         where list_id = #{listId}
+    </delete>
+
+    <delete id="deleteAllTodoList">
+        DELETE FROM todolist
+        WHERE user_id = #{userId}
+        AND is_completed = 1
     </delete>
 
 </mapper>

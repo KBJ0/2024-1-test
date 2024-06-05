@@ -12,6 +12,7 @@ public class GetCalendarRes {
     private long calendarId;
     private long userId;
     private long petId;
+    private String petName;
     private String title;
     private String content;
     @Schema(example = "2024-05-30", description = "날짜", requiredMode = Schema.RequiredMode.REQUIRED)
