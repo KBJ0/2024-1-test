@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "User 유저", description = "유저 CRUD, sign-in, sign-out")
 public class UserController {
     private final UserService service;
-    private final GlobalChecker check;
 
 
     @PostMapping("sign-up")

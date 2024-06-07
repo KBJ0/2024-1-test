@@ -22,6 +22,7 @@
             created_at AS createdAt, updated_at AS updatedAt
         FROM todolist
         WHERE user_id = #{userId}
+        AND is_completed = 0
         ORDER BY list_id DESC
         LIMIT 3
     </select>
@@ -43,7 +44,7 @@
 
     <delete id ="deleteToDoList">
         DELETE from todolist
-        where list_id = #{listId}
+        WHERE list_id = #{listId}
     </delete>
 
     <delete id="deleteAllTodoList">

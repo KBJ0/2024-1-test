@@ -2,17 +2,13 @@ package com.green.gittest.common;
 
 import com.green.gittest.common.model.ResultDto;
 import com.green.gittest.common.myexception.*;
-import com.green.gittest.common.myexception.UserNotFoundException;
-import com.green.gittest.common.myexception.WrongValue;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 @Order(2)
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -28,11 +24,7 @@ public class GlobalExceptionHandler {
     public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
         return ResultDto.resultDto("HttpStatus.BAD_REQUEST", "UserNotFoundException : 존재하지 않는 아이디입니다.");
     }
-    //3.워링벨류
-    @ExceptionHandler(WrongValue.class)
-    public ResultDto<String> handleWrongValueException(WrongValue ex) {
-        return ResultDto.resultDto("HttpStatus.BAD_REQUEST", "WrongValue : 입력된 값이 맞지 않습니다.");
-    }
+
     //4.런타임
     @ExceptionHandler(RuntimeException.class)
     public ResultDto<String> handleRuntimeException(RuntimeException ex) {
@@ -62,12 +54,6 @@ public class GlobalExceptionHandler {
         ex.printStackTrace();
         return ResultDto.resultDto("HttpStatus.INTERNAL_SERVER_ERROR", "HttpMediaTypeNotSupportedException : RESTfull 에러. 포스트맨이나 스웨거 바꿔서 사용 or 보내는 값의 타입 확인 하셈.");
     }
-    //8.사인업핸들러
-    @ExceptionHandler(SignUpException.class)
-    public ResultDto<String> handleSignUpException(SignUpException ex) {
-        ex.printStackTrace();
-        return ResultDto.resultDto("HttpStatus.INTERNAL_SERVER_ERROR", "SignUpException : 회원가입 오류임)");
-    }
     //9.메세지 못읽음
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResultDto<String> HttpMessageNotReadableException(HttpMessageNotReadableException ex) {
@@ -91,5 +77,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(CalendarNotFoundException.class)
     public ResultDto<String> handleCalendarNotFoundException(CalendarNotFoundException ex) {
         return ResultDto.resultDto("HttpStatus.BAD_REQUEST", "CalendarNotFoundException : 존재하지 않는 캘린더입니다.");
+    }
+
+    //13. 닉네임 중복
+    @ExceptionHandler(NicknameException.class)
+    public ResultDto<String> handleNicknameException(NicknameException ex) {
+        return ResultDto.resultDto("HttpStatus.BAD_REQUEST", "NicknameException : 중복된 닉네임입니다.");
     }
 }

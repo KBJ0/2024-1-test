@@ -17,8 +17,8 @@
     </select>
 
     <delete id ="deleteMainBanner">
-        DELETE from main_banner
-        where image_id = #{imageId}
+        DELETE FROM main_banner
+        WHERE image_id = #{imageId}
     </delete>
 
 

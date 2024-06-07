@@ -1,13 +1,9 @@
 package com.green.gittest.user.exception;
 
-import com.green.gittest.common.GlobalExceptionHandler;
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.common.myexception.SignUpException;
-import com.green.gittest.common.myexception.UserNotFoundException;
-import com.green.gittest.common.myexception.WrongValue;
+import com.green.gittest.common.myexception.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Order(1)
@@ -28,11 +24,17 @@ public class UserException{
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResultDto<String> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         ex.printStackTrace();
-        String errorMessage = "중복된 닉네임 입니다." ;
+        String errorMessage = "중복된 이메일 입니다." ;
         if (ex.getMessage().contains("FOREIGN KEY")) {
             errorMessage = "(참조하는 키가 존재하지 않습니다.)";
         }
         return ResultDto.resultDto("DN", errorMessage);// "중복된 닉네임 입니다."
+    }
+
+    //13. 닉네임 중복
+    @ExceptionHandler(NicknameException.class)
+    public ResultDto<String> handleNicknameException(NicknameException ex) {
+        return ResultDto.resultDto("DN", "중복된 닉네임입니다.");
     }
 
 }

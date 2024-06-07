@@ -19,8 +19,8 @@
     </select>
 
     <delete id ="deleteEventBanner">
-        DELETE from event_banner
-        where image_id = #{imageId}
+        DELETE FROM event_banner
+        WHERE image_id = #{imageId}
     </delete>
 
 </mapper>

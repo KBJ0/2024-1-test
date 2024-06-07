@@ -30,24 +30,22 @@
 
     <update id="updateCalendar">
         UPDATE calendar
-        SET
-        pet_id = #{petId},
-        title = #{title},
-        content = #{content},
-        start_date = #{startDate},
-        start_time = #{startTime}
-        WHERE
-        calendar_id = #{calendarId}
+        SET pet_id = #{petId},
+            title = #{title},
+            content = #{content},
+            start_date = #{startDate},
+            start_time = #{startTime}
+        WHERE calendar_id = #{calendarId}
     </update>
 
     <delete id ="deleteCalendar">
-        DELETE from calendar
-        where calendar_id = #{calendarId}
+        DELETE FROM calendar
+        WHERE calendar_id = #{calendarId}
     </delete>
 
     <select id="getCalendarDetail">
         SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName,
-        A.title, A.content, A.start_date AS startDate, A.start_time AS startTime
+            A.title, A.content, A.start_date AS startDate, A.start_time AS startTime
         FROM calendar A
         JOIN pet B
         ON A.pet_id = B.pet_id

@@ -37,12 +37,12 @@
 
     <delete id ="deletePet">
         DELETE from pet
-        where pet_id = #{petId}
+        WHERE pet_id = #{petId}
     </delete>
 
     <delete id ="deletePetOfCalendar">
         DELETE from calendar
-        where pet_id = #{petId}
+        WHERE pet_id = #{petId}
     </delete>
 
 

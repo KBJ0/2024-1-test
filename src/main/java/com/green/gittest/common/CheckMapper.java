@@ -8,5 +8,6 @@ public interface CheckMapper {
     Long getPetId(long petId);
     Long getCalendarId(long calendarId);
     Long getListId(long listId);
+    String checkNickname(String nickname);
     Integer getToDoListIsCompleted(long listId);
 }
