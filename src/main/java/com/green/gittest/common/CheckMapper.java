@@ -4,7 +4,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface CheckMapper {
-    int getUserId(long userId);
-    int getPetId(long petId);
-    int getCalendarId(long calendarId);
+    Long getUserId(long userId);
+    Long getPetId(long petId);
+    Long getCalendarId(long calendarId);
+    int getListId(long listId);
+    int getToDoListIsCompleted(long listId);
 }

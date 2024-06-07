@@ -15,11 +15,23 @@
         where pet_id= #{petId}
     </select>
 
-
     <select id = "getCalendarId">
         SELECT calendar_id
         from calendar
         where calendar_id= #{calendarId}
     </select>
+
+    <select id = "getListId">
+        SELECT list_id
+        from todolist
+        where list_id= #{listId}
+    </select>
+
+    <select id = "getToDoListIsCompleted">
+        SELECT is_completed
+        from todolist
+        where list_id= #{listId}
+    </select>
+
 
 </mapper>

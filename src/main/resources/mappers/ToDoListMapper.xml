@@ -23,6 +23,15 @@
         WHERE list_id = #{listId}
     </update>
 
+    <update id="updateToDoListIsCompleted">
+    UPDATE todolist
+    SET is_completed = CASE
+    WHEN is_completed = 1 THEN 0
+    ELSE 1
+    END
+    WHERE list_id = #{listId}
+    </update>
+
     <delete id ="deleteToDoList">
         DELETE from todolist
         where list_id = #{listId}

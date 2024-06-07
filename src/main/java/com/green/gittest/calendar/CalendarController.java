@@ -38,6 +38,12 @@ public class CalendarController {
     public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(@RequestParam(name="pet_id") Long petId){
         return service.getCalendarFromPetId(petId);
     }
+    @GetMapping("calendar_id")
+    @Operation(summary = "특정 캘린더 일정 불러오기" , description = "특정 캘린더 일정을 불러옵니다. calendarId값은 캘린더의 PK 값")
+    public ResultDto<GetCalendarRes> getCalendarDetail(@RequestParam(name="calendar_id") Long calendarId){
+        return service.getCalendarDetail(calendarId);
+    }
+
     @PatchMapping
     @Operation(summary = "일정 수정" , description = "등록된 일정을 수정합니다")
     public ResultDto<Integer> updateCalendar(@RequestBody UpdateCalendarReq p){

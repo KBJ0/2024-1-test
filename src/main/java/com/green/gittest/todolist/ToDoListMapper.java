@@ -8,7 +8,9 @@ import java.util.List;
 public interface ToDoListMapper {
     int postToDoList(PostToDoListReq p);
     List<GetToDoListRes> getToDoListByUserIdForRead(long userId);
+    List<GetToDoListRes> getUpcomingToDoList(long userId);
     int updateToDoListContent(UpdateToDoListReq p);
+    int updateToDoListIsCompleted(long listId);
     int deleteToDoList(long listId);
     int deleteAllTodoList(Long userId);
 }

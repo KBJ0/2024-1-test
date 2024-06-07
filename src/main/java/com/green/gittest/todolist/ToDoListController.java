@@ -27,7 +27,7 @@ public class ToDoListController {
 
     @GetMapping
     @Operation(summary = "일정 불러오기" , description = "완료된 일정까지 모두 불러옵니다.")
-    public ResultDto<List<GetToDoListRes>> getToDoList(@RequestParam(name ="userId")Long userId){
+    public ResultDto<List<GetToDoListRes>> getToDoList(@RequestParam(name ="user_id")Long userId){
         return service.getToDoList(userId);
     }
 
@@ -37,15 +37,21 @@ public class ToDoListController {
         return service.updateToDoList(p);
     }
 
+    @PatchMapping("is-completed")
+    @Operation(summary = "일정 수정" , description = "listId는 일정의 pk")
+    public ResultDto<Integer> updateToDoListIsCompleted(@RequestParam(name = "list_id") long listId){
+        return service.updateToDoListIsCompleted(listId);
+    }
+
     @DeleteMapping
     @Operation(summary = "일정 삭제" , description = "listId는 일정의 pk")
-    public ResultDto<Integer> deleteToDoList(@RequestParam(name ="listId") Long listId){
+    public ResultDto<Integer> deleteToDoList(@RequestParam(name ="list_id") Long listId){
         return service.deleteToDoList(listId);
     }
 
     @DeleteMapping("all-delete")
     @Operation(summary = "완료된 일정 전체 삭제" , description = "userId는 로그인된 유저의 pk")
-    public ResultDto<Integer> deleteAllTodoList(@RequestParam(name ="userId") Long userId){
+    public ResultDto<Integer> deleteAllTodoList(@RequestParam(name ="user_id") Long userId){
         return service.deleteAllTodoList(userId);
     }
 

@@ -3,7 +3,6 @@ package com.green.gittest.todolist;
 import com.green.gittest.common.CheckMapper;
 import com.green.gittest.common.model.ResultDto;
 import com.green.gittest.common.myexception.ListNotFoundException;
-import com.green.gittest.common.myexception.SignUpException;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.todolist.model.*;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +29,7 @@ public class ToDoListService {
 
 
     public ResultDto<List<GetToDoListRes>> getToDoList(Long userId) {
-        if(checkMapper.getUserId(userId) == 0 ) throw new UserNotFoundException();
+        if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
         List<GetToDoListRes> list = mapper.getToDoListByUserIdForRead(userId);
         String msg = "투두리스트 일정을 정상적으로 불러왔습니다.";
         return ResultDto.resultDto(HttpStatus.OK, "SU", msg, list);
@@ -38,12 +37,21 @@ public class ToDoListService {
 
     public ResultDto<Integer> updateToDoList(UpdateToDoListReq p) {
         if(p.getContent() == null || p.getContent().isEmpty()) throw new NullPointerException();
-        if(checkMapper.getUserId(p.getUserId()) == 0 ) throw new UserNotFoundException();
+        if(checkMapper.getUserId(p.getUserId()) == null ) throw new UserNotFoundException();
         int result = mapper.updateToDoListContent(p);
         String msg = "투두리스트 내용 수정이 정상적으로 완료되었습니다.";
         if(result == 0) throw new ListNotFoundException();
         return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
     }
+
+    public ResultDto<Integer> updateToDoListIsCompleted(long listId) {
+        if(checkMapper.getListId(listId) == 0) throw new NullPointerException();
+        int result = checkMapper.getToDoListIsCompleted(listId);
+        mapper.updateToDoListIsCompleted(listId);
+        if(result == 1)  return ResultDto.resultDto( "SU", "투두리스트 완료여부를 체크삭제하였습니다.", 1-result);
+        return ResultDto.resultDto( "SU", "투두리스트 완료여부를 체크하였습니다.", 1-result);
+    }
+
 
     public ResultDto<Integer> deleteToDoList(Long listId) {
         int result = mapper.deleteToDoList(listId);

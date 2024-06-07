@@ -1,15 +1,8 @@
 package com.green.gittest.pet.exception;
 
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.common.myexception.SignUpException;
-import com.green.gittest.common.myexception.UserNotFoundException;
-import com.green.gittest.common.myexception.WrongValue;
+import com.green.gittest.common.myexception.*;
 import org.springframework.core.annotation.Order;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.web.HttpMediaTypeNotSupportedException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

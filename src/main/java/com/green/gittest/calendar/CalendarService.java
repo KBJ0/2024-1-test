@@ -22,21 +22,22 @@ public class CalendarService {
 
     public ResultDto<PostCalendarRes> postCalendar(PostCalendarReq p) {
         if (p == null) throw new NullPointerException();
-        if(checkMapper.getUserId(p.getUserId()) == 0 ) throw new UserNotFoundException();
-        if(checkMapper.getPetId(p.getPetId()) == 0 ) throw new PetNotFoundException();
+        if(checkMapper.getUserId(p.getUserId()) == null ) throw new UserNotFoundException();
+        if(checkMapper.getPetId(p.getPetId()) == null ) throw new PetNotFoundException();
         mapper.postCalendar(p);
         String msg = "캘린더 일정이 정상적으로 추가 완료되었습니다.";
         PostCalendarRes res = new PostCalendarRes();
         res.setCalendarId(p.getCalendarId());
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg, res);
+
+        return ResultDto.resultDto("SU", msg, res);
     }
 
     public ResultDto<List<GetCalendarRes>> getCalendarFromUserId(long userId){
-        if(checkMapper.getUserId(userId) == 0 ) throw new UserNotFoundException();
+        if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
         List<GetCalendarRes> list = mapper.getCalendarFromUserId(userId);
         String msg = "캘린더 불러오기 성공 verUserid";
 
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg, list);
+        return ResultDto.resultDto("SU", msg, list);
     }
 
     public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(long petId){
@@ -49,8 +50,9 @@ public class CalendarService {
 
     public ResultDto<Integer> updateCalendar(UpdateCalendarReq p){
         if (p == null) throw new NullPointerException();
-        if(checkMapper.getUserId(p.getUserId()) == 0 ) throw new UserNotFoundException();
-        if(checkMapper.getPetId(p.getPetId()) == 0 ) throw new PetNotFoundException();
+        if(checkMapper.getCalendarId(p.getCalendarId()) == null ) throw new CalendarNotFoundException();
+        if(checkMapper.getPetId(p.getPetId()) == null ) throw new UserNotFoundException();
+        if(checkMapper.getPetId(p.getPetId()) == null ) throw new PetNotFoundException();
         mapper.updateCalendar(p);
         String msg = "캘린더 변경 완료";
 
@@ -67,4 +69,9 @@ public class CalendarService {
     }
 
 
+    public ResultDto<GetCalendarRes> getCalendarDetail(long calendarId) {
+        GetCalendarRes list = mapper.getCalendarDetail(calendarId);
+        if(checkMapper.getCalendarId(calendarId) == 0 ) throw new CalendarNotFoundException();
+        return ResultDto.resultDto("SU","캘린더를 정상적으로 불러왔습니다.",list);
+    }
 }
