@@ -21,7 +21,7 @@ public class CalendarException {
     //2.유저낫
     @ExceptionHandler(UserNotFoundException.class)
     public ResultDto<String> handleUserNotFoundException(UserNotFoundException ex) {
-        return ResultDto.resultDto(HttpStatus.BAD_REQUEST,"NU", "존재하지 않는 유저 입니다.");
+        return ResultDto.resultDto("NU", "존재하지 않는 유저 입니다.");
     }
 //    //3.워링벨류 BindingException
     @ExceptionHandler(BindingException.class)
@@ -32,12 +32,16 @@ public class CalendarException {
     @ExceptionHandler(RuntimeException.class)
     public ResultDto<String> handleRuntimeException(RuntimeException ex) {
         ex.printStackTrace();
-        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "DBE","서버에러 입니다.");
+        return ResultDto.resultDto( "DBE","서버에러 입니다.");
     }
 
     @ExceptionHandler(PetNotFoundException.class)
     public ResultDto<String> handlePetNotFoundException(PetNotFoundException ex) {
-        return ResultDto.resultDto(HttpStatus.INTERNAL_SERVER_ERROR, "NP","존재하지 않는 반려동물 입니다.");
+        return ResultDto.resultDto( "NP","존재하지 않는 반려동물 입니다.");
     }
 
+    @ExceptionHandler(CalendarNotFoundException.class)
+    public ResultDto<String> handleCalendarNotFoundException(CalendarNotFoundException ex) {
+        return ResultDto.resultDto( "NP","존재하지 않는 반려동물 입니다.");
+    }
 }

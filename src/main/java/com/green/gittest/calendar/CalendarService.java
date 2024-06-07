@@ -25,7 +25,7 @@ public class CalendarService {
         if(checkMapper.getUserId(p.getUserId()) == null ) throw new UserNotFoundException();
         if(checkMapper.getPetId(p.getPetId()) == null ) throw new PetNotFoundException();
         mapper.postCalendar(p);
-        String msg = "캘린더 일정이 정상적으로 추가 완료되었습니다.";
+        String msg = "캘린더 일정이 정상적으로 추가 되었습니다.";
         PostCalendarRes res = new PostCalendarRes();
         res.setCalendarId(p.getCalendarId());
 
@@ -35,17 +35,18 @@ public class CalendarService {
     public ResultDto<List<GetCalendarRes>> getCalendarFromUserId(long userId){
         if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
         List<GetCalendarRes> list = mapper.getCalendarFromUserId(userId);
-        String msg = "캘린더 불러오기 성공 verUserid";
+        String msg = "캘린더를 정상적으로 불러왔습니다.";
 
         return ResultDto.resultDto("SU", msg, list);
     }
 
-    public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(long petId){
+    public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(long petId,long userId){
+        if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
         if(checkMapper.getPetId(petId) == 0) throw new PetNotFoundException();
         List<GetCalendarRes> list = mapper.getCalendarFromPetId(petId);
-        String msg = "캘린더 불러오기 성공 verPetId";
+        String msg = "특정 반려동물의 캘린더를 정상적으로 불러왔습니다.";
 
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg, list);
+        return ResultDto.resultDto("SU", msg, list);
     }
 
     public ResultDto<Integer> updateCalendar(UpdateCalendarReq p){
@@ -54,9 +55,9 @@ public class CalendarService {
         if(checkMapper.getPetId(p.getPetId()) == null ) throw new UserNotFoundException();
         if(checkMapper.getPetId(p.getPetId()) == null ) throw new PetNotFoundException();
         mapper.updateCalendar(p);
-        String msg = "캘린더 변경 완료";
+        String msg = "특정 반려동물의 캘린더를 정상적으로 수정하였습니다.";
 
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
+        return ResultDto.resultDto("SU", msg);
     }
 
     public ResultDto<Integer> deleteCalendar(long calendarId){
@@ -65,7 +66,7 @@ public class CalendarService {
         mapper.deleteCalendar(calendarId);
         String msg = "특정 반려동물의 캘린더를 정상적으로 삭제하였습니다.";
 
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
+        return ResultDto.resultDto("SU", msg);
     }
 
 

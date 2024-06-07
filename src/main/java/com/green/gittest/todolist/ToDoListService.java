@@ -24,7 +24,7 @@ public class ToDoListService {
         PostToDoListRes result = new PostToDoListRes();
         result.setListId(p.getListId());
         String msg = "투두리스트 등록이 정상적으로 완료되었습니다.";
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg, result);
+        return ResultDto.resultDto("SU", msg, result);
     }
 
 
@@ -32,7 +32,14 @@ public class ToDoListService {
         if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
         List<GetToDoListRes> list = mapper.getToDoListByUserIdForRead(userId);
         String msg = "투두리스트 일정을 정상적으로 불러왔습니다.";
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg, list);
+        return ResultDto.resultDto("SU", msg, list);
+    }
+
+    public ResultDto<List<GetToDoListRes>> getUpcomingToDoList(Long userId){
+        if(checkMapper.getUserId(userId) == null ) throw new UserNotFoundException();
+        List<GetToDoListRes> list = mapper.getUpcomingToDoList(userId);
+        String msg = "다가오는 일정을 정상적으로 불러왔습니다.";
+        return ResultDto.resultDto("SU", msg, list);
     }
 
     public ResultDto<Integer> updateToDoList(UpdateToDoListReq p) {
@@ -41,7 +48,7 @@ public class ToDoListService {
         int result = mapper.updateToDoListContent(p);
         String msg = "투두리스트 내용 수정이 정상적으로 완료되었습니다.";
         if(result == 0) throw new ListNotFoundException();
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
+        return ResultDto.resultDto( "SU", msg);
     }
 
     public ResultDto<Integer> updateToDoListIsCompleted(long listId) {
@@ -57,7 +64,7 @@ public class ToDoListService {
         int result = mapper.deleteToDoList(listId);
         String msg = "투두리스트 삭제가 정상적으로 완료되었습니다.";
         if(result == 0) throw new ListNotFoundException();
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
+        return ResultDto.resultDto("SU", msg);
     }
 
     public ResultDto<Integer> deleteAllTodoList(Long userId){
@@ -65,7 +72,7 @@ public class ToDoListService {
         int result = mapper.deleteAllTodoList(userId);
         String msg = "완료한 일정 전체 삭제가 완료되었습니다.";
         if(result == 0) throw new ListNotFoundException("존재하지 않는 유저입니다.");
-        return ResultDto.resultDto(HttpStatus.OK, "SU", msg);
+        return ResultDto.resultDto("SU", msg);
     }
 
 }

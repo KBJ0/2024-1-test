@@ -5,12 +5,11 @@ import lombok.Data;
 
 @Data
 public class PostPetReq {
-    @JsonIgnore
-    private long petId;
+    @JsonIgnore private long petId;
     private long userId;
     private String petName;
     private String petCategory;
-    private String petImage;
+    @JsonIgnore private String petImage;
     private String petIcon;
     private String petBackColor;
 }
