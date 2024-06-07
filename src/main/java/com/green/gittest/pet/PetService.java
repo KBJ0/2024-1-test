@@ -1,6 +1,9 @@
 package com.green.gittest.pet;
 
+import com.green.gittest.common.CheckMapper;
 import com.green.gittest.common.CustomFileUtils;
+import com.green.gittest.common.model.ResultDto;
+import com.green.gittest.common.myexception.PetNotFoundException;
 import com.green.gittest.common.myexception.UserNotFoundException;
 import com.green.gittest.pet.model.*;
 import jakarta.validation.constraints.Null;
@@ -18,14 +21,13 @@ import java.util.List;
 @Slf4j
 public class PetService {
     private final PetMapper mapper;
-//    private final CheckMapper checkMapper;
+    private final CheckMapper checkMapper;
     private final CustomFileUtils customFileUtils;
 
 
     @Transactional
-    public PostPetRes postPet(MultipartFile petImage, PostPetReq p){
-
-
+    public ResultDto<PostPetRes> postPet(MultipartFile petImage, PostPetReq p){
+        if(checkMapper.getUserId(p.getUserId()) == null) throw new UserNotFoundException();
         String saveFileName = customFileUtils.makeRandomFileName(petImage);
         p.setPetImage(saveFileName);
 
@@ -42,16 +44,23 @@ public class PetService {
             throw new RuntimeException();
         }
 
-        return PostPetRes.builder().petId(p.getPetId()).petImage(saveFileName).build();
-        // 프론트가 없는 정보만 가져다 주기.
+        return ResultDto.resultDto("SU","반려동물 등록이 정상적으로 완료되었습니다."
+                        , PostPetRes.builder()
+                        .petId(p.getPetId())
+                        .petImage(saveFileName)
+                        .build());
     }
 
-    public List<GetPetRes> getPet(Long userId) {
-        return mapper.getPetForUserId(userId);
+    public ResultDto<List<GetPetRes>> getPet(Long userId) {
+        if(checkMapper.getUserId(userId) == null) throw new UserNotFoundException();
+        List<GetPetRes> list = mapper.getPetForUserId(userId);
+        return ResultDto.resultDto("SU", "반려동물 정보를 정상적으로 불러왔습니다.", list);
     }
 
     @Transactional
-    public UpdatePetRes updatePet(MultipartFile petImage, UpdatePetReq p) {
+    public ResultDto<UpdatePetRes> updatePet(MultipartFile petImage, UpdatePetReq p) {
+        if(checkMapper.getPetId(p.getPetId()) == null) throw new PetNotFoundException();
+
         String path = String.format("pet/%d", p.getPetId());
         String saveFileName = customFileUtils.makeRandomFileName(petImage);
         String target = String.format("%s/%s", path, saveFileName);
@@ -66,11 +75,16 @@ public class PetService {
         }
         p.setPetImage(saveFileName);
         mapper.updatePet(p);
-        return UpdatePetRes.builder().petImage(saveFileName).build();
+
+        return ResultDto.resultDto("SU","반려동물 정보 수정이 정상적으로 완료되었습니다."
+                , UpdatePetRes.builder().petImage(saveFileName).build());
     }
 
-    public int deletePet(Long petId) {
+    public ResultDto<Integer> deletePet(Long petId) {
+        if(checkMapper.getPetId(petId) == null) throw new PetNotFoundException();
         customFileUtils.deleteFolder("pet/" + petId);
-        return mapper.deletePet(petId);
+        mapper.deletePetOfCalendar(petId);
+        mapper.deletePet(petId);
+        return ResultDto.resultDto("SU","반려동물 삭제가 정상적으로 완료되었습니다.");
     }
 }

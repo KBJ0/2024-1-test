@@ -31,6 +31,12 @@ public class ToDoListController {
         return service.getToDoList(userId);
     }
 
+    @GetMapping("upcoming")
+    @Operation(summary = "다가오는 일정 불러오기" , description = "다가오는 일정 중 상위 3개를 불러옵니다.")
+    public ResultDto<List<GetToDoListRes>> getUpcomingToDoList(@RequestParam(name ="user_id")Long userId){
+        return service.getUpcomingToDoList(userId);
+    }
+
     @PatchMapping
     @Operation(summary = "일정 수정" , description = "listId는 일정의 pk")
     public ResultDto<Integer> updateToDoList(@RequestBody UpdateToDoListReq p){
@@ -54,5 +60,6 @@ public class ToDoListController {
     public ResultDto<Integer> deleteAllTodoList(@RequestParam(name ="user_id") Long userId){
         return service.deleteAllTodoList(userId);
     }
+
 
 }

@@ -9,6 +9,6 @@ public class UpdatePetReq {
     private String petName;
     private String petCategory;
     @JsonIgnore private String petImage;
-    private String petIcon;
+    private int petIcon;
     private String petBackColor;
 }

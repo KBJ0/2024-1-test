@@ -13,4 +13,5 @@ public interface PetMapper {
     List<GetPetRes> getPetForUserId(Long userId);
     int updatePet(UpdatePetReq p);
     int deletePet(Long petId);
+    int deletePetOfCalendar(Long petId);
 }

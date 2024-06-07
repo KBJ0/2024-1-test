@@ -16,5 +16,6 @@ public interface CalendarMapper {
     List<GetCalendarRes> getCalendarFromPetId(long petId);
     int updateCalendar(UpdateCalendarReq p);
     int deleteCalendar(long calendarId);
+    GetCalendarRes getCalendarDetail(long calendarId);
 
 }

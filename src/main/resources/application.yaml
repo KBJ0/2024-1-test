@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://localhost:3306/project_1
+    url: jdbc:log4jdbc:mariadb://localhost:3306/gittest
     username: root
-    password: green502
+    password: 2theowkd2@
   jpa:
     open-in-view: false
     properties:
@@ -34,4 +34,4 @@ springdoc:
     disabled: true
 
 file:
-  directory: D:\Yerim\project_1\
+  directory: C:\Yerim\project_1\

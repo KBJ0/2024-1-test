@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 public class GetToDoListRes {
     private long listId;
-    private long userId;
     private String content;
     private int isCompleted;
     private String createdAt;

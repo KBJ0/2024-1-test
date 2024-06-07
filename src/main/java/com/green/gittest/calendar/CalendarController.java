@@ -8,10 +8,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Calendar;
 import java.util.List;
 
 @Slf4j
@@ -34,7 +32,7 @@ public class CalendarController {
         return service.getCalendarFromUserId(userId);
     }
     @GetMapping("pet_id")
-    @Operation(summary = "펫 별 일정 불러오기" , description = "선택된 펫의 일정을 불러옵니다. petId값은 펫의 PK 값")
+    @Operation(summary = "반려동물 별 일정 불러오기" , description = "선택된 반려동물의 일정을 불러옵니다. petId값은 펫의 PK 값")
     public ResultDto<List<GetCalendarRes>> getCalendarFromPetId(@RequestParam(name="pet_id") Long petId){
         return service.getCalendarFromPetId(petId);
     }
@@ -52,7 +50,7 @@ public class CalendarController {
 
     @DeleteMapping
     @Operation(summary = "일정 삭제" , description = "등록된 일정을 삭제합니다")
-    public ResultDto<Integer> deleteCalendar(@RequestParam Long calendarId){
+    public ResultDto<Integer> deleteCalendar(@RequestParam(name = "calendar_id") Long calendarId){
         return service.deleteCalendar(calendarId);
     }
 

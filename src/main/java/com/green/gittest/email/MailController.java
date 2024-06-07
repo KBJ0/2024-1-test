@@ -29,11 +29,11 @@ public class MailController {
             System.out.println("이메일 인증 요청이 들어옴");
             System.out.println("이메일 인증 이메일 :" + emailDto.getEmail());
            MailSendRes result = mailService.joinEmail(emailDto.getEmail());
-            if(result.equals("이미 가입된 이메일입니다.")){
+            if(result.getEmailCheckCode().equals("이미 가입된 이메일입니다.")){
                 return MailResult.<MailSendRes>builder()
                         .code("DE")
                         .message("이미 가입된 이메일입니다.")
-                        .data(result).build();
+                        .data(null).build();
             }
             return MailResult.<MailSendRes>builder()
                     .code("SU")
@@ -62,7 +62,7 @@ public class MailController {
             return MailResult.<MailCheckRes>builder()
                     .code("IC")
                     .message("인증번호를 다시 확인해주세요.")
-                    .data(res).build();
+                    .data(null).build();
         }
     }
 }

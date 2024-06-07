@@ -7,6 +7,6 @@ public interface CheckMapper {
     Long getUserId(long userId);
     Long getPetId(long petId);
     Long getCalendarId(long calendarId);
-    int getListId(long listId);
-    int getToDoListIsCompleted(long listId);
+    Long getListId(long listId);
+    Integer getToDoListIsCompleted(long listId);
 }

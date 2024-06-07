@@ -10,8 +10,9 @@
     </insert>
 
     <select id="getCalendarFromUserId">
-        SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName, A.title,
-                A.content, A.start_date AS startDate, A.start_time AS startTime
+        SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName
+        , B.pet_image AS petImage, A.title, A.content, A.start_date AS startDate
+        , A.start_time AS startTime
         FROM calendar A
         JOIN pet B
         ON A.pet_id = B.pet_id
@@ -19,8 +20,8 @@
     </select>
 
     <select id="getCalendarFromPetId">
-        SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName, A.title,
-        A.content, A.start_date AS startDate, A.start_time AS startTime
+        SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName,
+            B.pet_image AS petImage, A.title, A.content, A.start_date AS startDate, A.start_time AS startTime
         FROM calendar A
         JOIN pet B
         ON A.pet_id = B.pet_id
@@ -44,4 +45,12 @@
         where calendar_id = #{calendarId}
     </delete>
 
+    <select id="getCalendarDetail">
+        SELECT A.calendar_id AS calendarId, A.pet_id AS petId, B.pet_name AS petName,
+        A.title, A.content, A.start_date AS startDate, A.start_time AS startTime
+        FROM calendar A
+        JOIN pet B
+        ON A.pet_id = B.pet_id
+        WHERE calendar_id = #{calendarId};
+    </select>
 </mapper>

@@ -8,7 +8,7 @@ public class GetPetRes {
     private String petName;
     private String petCategory;
     private String petImage;
-    private String petIcon;
+    private int petIcon;
     private String petBackColor;
     private String createdAt;
 }

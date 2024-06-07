@@ -16,6 +16,15 @@
         WHERE user_id = #{userId}
         ORDER BY list_id DESC
     </select>
+    
+    <select id="getUpcomingToDoList">
+        SELECT list_id AS listId, content, is_completed AS isCompleted,
+            created_at AS createdAt, updated_at AS updatedAt
+        FROM todolist
+        WHERE user_id = #{userId}
+        ORDER BY list_id DESC
+        LIMIT 3
+    </select>
 
     <update id="updateToDoListContent">
         UPDATE todolist

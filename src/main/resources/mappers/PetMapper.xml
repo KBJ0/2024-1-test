@@ -40,4 +40,10 @@
         where pet_id = #{petId}
     </delete>
 
+    <delete id ="deletePetOfCalendar">
+        DELETE from calendar
+        where pet_id = #{petId}
+    </delete>
+
+
 </mapper>
