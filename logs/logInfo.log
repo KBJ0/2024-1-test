@@ -19052,3 +19052,16 @@ java.sql.SQLIntegrityConstraintViolationException: (conn=146) Duplicate entry 'e
 [2024-06-10 15:54:56 [33mWARN [0;39m http-nio-8080-exec-6] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [36mResolved [org.springframework.dao.DuplicateKeyException: <EOL><EOL>### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=146) Duplicate entry 'ex9955ample@naver.com' for key 'email'<EOL><EOL>### The error may exist in file [D:\KBJ\BackEnd\2024-1-test\build\resources\main\mappers\UserMapper.xml]<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: INSERT INTO user         SET email = ?         , password = ?         , nickname = ?<EOL><EOL>### Cause: java.sql.SQLIntegrityConstraintViolationException: (conn=146) Duplicate entry 'ex9955ample@naver.com' for key 'email'<EOL>; (conn=146) Duplicate entry 'ex9955ample@naver.com' for key 'email'][0;39m
 [2024-06-10 15:55:43 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2024-06-10 15:55:43 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-10 17:26:25 INFO  background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-06-10 17:26:25 INFO  Test worker] [com.green.gittest.GitTestApplicationTests] Starting GitTestApplicationTests using Java 17.0.10 with PID 7436 (started by Administrator in D:\Yerim\BackEnd\2024-1-test)
+[2024-06-10 17:26:25 INFO  Test worker] [com.green.gittest.GitTestApplicationTests] No active profile set, falling back to 1 default profile: "default"
+[2024-06-10 17:26:26 INFO  Test worker] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-06-10 17:26:26 INFO  Test worker] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-06-10 17:26:26 INFO  Test worker] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+[2024-06-10 17:26:27 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-06-10 17:26:27 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@44de8e00
+[2024-06-10 17:26:27 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-06-10 17:26:29 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-06-10 17:26:29 INFO  Test worker] [com.green.gittest.GitTestApplicationTests] Started GitTestApplicationTests in 3.809 seconds (process running for 4.856)
+[2024-06-10 17:26:29 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-06-10 17:26:29 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.

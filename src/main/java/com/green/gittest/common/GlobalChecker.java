@@ -1,7 +1,6 @@
 package com.green.gittest.common;
 
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.common.myexception.SignUpException;
 import com.green.gittest.user.model.SignUpPostReq;
 import lombok.Getter;
 import lombok.Setter;
