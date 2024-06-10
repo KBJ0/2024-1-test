@@ -6,9 +6,9 @@ import io.swagger.v3.oas.annotations.info.Info;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "그린그램",
-                description = "Greengram with React",
-                version = "v2"
+                title = "petmilly",
+                description = "펫밀리 기본기능 구현, 초기버전",
+                version = "prototype 1"
         )
 )
 
