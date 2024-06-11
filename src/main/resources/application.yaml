@@ -38,18 +38,46 @@ file:
   directory: D:\Yerim\project_1\
 
 ---
-  spring:
-    config:
-      activate:
-        on-profile: prod
+spring:
+   config:
+     activate:
+       on-profile: prod
+   data:
+     redis:
+       port: 6379
+       host: 192.168.0.144
 
-    datasource:
-      url: jdbc:log4jdbc:mariadb://192.168.0.144:3306/db_odd_first_2
-      username: odd_first_2
-      password: channel
-    sql:
-      init:
-        mode: always
+   datasource:
+     url: jdbc:log4jdbc:mariadb://192.168.0.144:3306/db_odd_first_2
+     username: odd_first_2
+     password: channel
+   jpa:
+     open-in-view: false
+     properties:
+       hibernate:
+         cache.use_second_level_cache: false  # JCache 설정 비활성화
+   servlet:
+     multipart:
+       max-file-size: 5MB
+       max-request-size: 30MB
+   sql:
+     init:
+       mode: always
 
-  file:
-    directory: /home/download
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+  swagger-ui:
+    path: /swagger
+    operations-sorter: method
+    default-model-expand-depth: 10
+    default-models-expand-depth: 10
+    display-request-duration: true
+  cache:
+    disabled: true
+
+file:
+   directory: /home/download
