@@ -1,7 +1,6 @@
 package com.green.gittest.mainbanner;
 
 import com.green.gittest.mainbanner.model.GetMainBannerRes;
-import com.green.gittest.mainbanner.model.PostMainBannerReq;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

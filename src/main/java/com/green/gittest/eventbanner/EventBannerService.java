@@ -3,7 +3,6 @@ package com.green.gittest.eventbanner;
 
 import com.green.gittest.eventbanner.model.GetEventBannerReq;
 import com.green.gittest.eventbanner.model.GetEventBannerRes;
-import com.green.gittest.eventbanner.model.PostEventBannerReq;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
