@@ -5,6 +5,7 @@ import com.green.gittest.mainbanner.model.GetMainBannerRes;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -13,10 +14,9 @@ import java.util.List;
 @Slf4j
 public class MainBannerService {
     private final MainBannerMapper mapper;
-
-    public long postMainBanner(PostMainBannerReq p){
-        mapper.postMainBanner(p);
-        return p.getImageId();
+    // 11
+    public int postMainBanner(MultipartFile imageUrl){
+        return mapper.postMainBanner(imageUrl);
     }
     List<GetMainBannerRes> getMainBanner(Object p){
         return mapper.getMainBanner(p);
