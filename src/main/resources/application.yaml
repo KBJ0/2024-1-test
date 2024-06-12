@@ -35,8 +35,7 @@ springdoc:
     disabled: true
 
 file:
-  directory: D:\Yerim\project_1\
-
+  directory: C:\Users\odd_first_2\image\
 ---
 spring:
    config:
