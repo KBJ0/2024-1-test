@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("api/eventBanner")
 @Tag(name = "EventBanner", description = "EventBanner CRUD")
 public class EventBannerController {
-    private final EventBannerService service;
+    private final EventBannerService service; 
 
     @PostMapping
     @Operation(summary = "EventBanner 등록" , description = "EventBanner에 추가할 사진을 등록합니다")
