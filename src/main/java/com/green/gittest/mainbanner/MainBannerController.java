@@ -17,7 +17,7 @@ import java.util.List;
 @Tag(name = "MainBanner", description = "MainBanner CRUD")
 public class MainBannerController {
     private final MainBannerService service;
-
+    // 11
     @PostMapping
     @Operation(summary = "MainBanner 등록" , description = "MainBanner에 추가할 사진을 등록합니다")
     public ResultDto<Long> postMainBanner(@RequestBody PostMainBannerReq p){
