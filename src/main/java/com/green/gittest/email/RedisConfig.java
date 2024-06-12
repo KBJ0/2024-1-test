@@ -1,4 +1,4 @@
-package com.green.gittest.common;
+package com.green.gittest.email;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
