@@ -18,7 +18,6 @@ spring:
       port: 6379
       host: 192.168.0.144
 
-
 mybatis:
   mapper-locations: mappers/**/*.xml
 
@@ -35,7 +34,8 @@ springdoc:
     disabled: true
 
 file:
-  directory: C:\Users\odd_first_2\image\
+  directory: D:/home/download
+
 ---
 spring:
    config:
