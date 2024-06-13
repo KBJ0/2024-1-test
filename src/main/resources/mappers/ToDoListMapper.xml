@@ -43,7 +43,7 @@
     </update>
 
     <delete id ="deleteToDoList">
-        DELETE from todolist
+        DELETE FROM todolist
         WHERE list_id = #{listId}
     </delete>
 
