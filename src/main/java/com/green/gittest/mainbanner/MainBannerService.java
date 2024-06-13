@@ -15,9 +15,9 @@ import java.util.List;
 public class MainBannerService {
     private final MainBannerMapper mapper;
     // 11
-    public int postMainBanner(MultipartFile imageUrl){
-        return mapper.postMainBanner(imageUrl);
-    }
+//    public int postMainBanner(MultipartFile imageUrl){
+//        return mapper.postMainBanner(imageUrl);
+//    }
     List<GetMainBannerRes> getMainBanner(Object p){
         return mapper.getMainBanner(p);
     }

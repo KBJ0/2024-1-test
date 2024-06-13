@@ -16,9 +16,9 @@ import java.util.List;
 public class EventBannerService {
     private final EventBannerMapper mapper;
     // 1
-    public int postEventBanner(MultipartFile imageUrl){
-        return mapper.postEventBanner(imageUrl);
-    }
+//    public int postEventBanner(MultipartFile imageUrl){
+//        return mapper.postEventBanner(imageUrl);
+//    }
     List<GetEventBannerRes> getEventBanner(GetEventBannerReq p){
         return mapper.getEventBanner(p);
     }

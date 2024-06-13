@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.green.gittest.mainbanner.MainBannerMapper">
 
-    <insert id="postMainBanner" useGeneratedKeys="true" keyProperty="imageId">
-        INSERT INTO main_banner
-        (image_url)
-        VALUES
-        (#{imageUrl})
-    </insert>
+<!--    <insert id="postMainBanner" useGeneratedKeys="true" keyProperty="imageId">-->
+<!--        INSERT INTO main_banner-->
+<!--        (image_url)-->
+<!--        VALUES-->
+<!--        (#{imageUrl})-->
+<!--    </insert>-->
 
     <select id="getMainBanner">
         SELECT
@@ -16,11 +16,10 @@
         main_banner
     </select>
 
+
     <delete id ="deleteMainBanner">
         DELETE FROM main_banner
         WHERE image_id = #{imageId}
     </delete>
-
-
 
 </mapper>
