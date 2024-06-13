@@ -44,7 +44,7 @@ public class ToDoListService {
 
     public ResultDto<Integer> updateToDoList(UpdateToDoListReq p) {
         if(p.getContent() == null || p.getContent().isEmpty()) throw new NullPointerException();
-        if(checkMapper.getUserId(p.getUserId()) == null ) throw new UserNotFoundException();
+//        if(checkMapper.getUserId(p.getUserId()) == null ) throw new UserNotFoundException();
         int result = mapper.updateToDoListContent(p);
         String msg = "투두리스트 내용 수정이 정상적으로 완료되었습니다.";
         if(result == 0) throw new ListNotFoundException();
