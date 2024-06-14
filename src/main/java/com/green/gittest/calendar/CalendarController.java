@@ -38,7 +38,7 @@ public class CalendarController {
     }
     @GetMapping("calendar_id")
     @Operation(summary = "특정 캘린더 일정 불러오기" , description = "특정 캘린더 일정을 불러옵니다. calendarId값은 캘린더의 PK 값")
-    public ResultDto<GetCalendarRes> getCalendarDetail(@RequestParam(name="calendar_id") Long calendarId){
+    public ResultDto<GetCalendarDetailRes> getCalendarDetail(@RequestParam(name="calendar_id") Long calendarId){
         return service.getCalendarDetail(calendarId);
     }
 

@@ -1,9 +1,6 @@
 package com.green.gittest.calendar;
 
-import com.green.gittest.calendar.model.GetCalendarRes;
-import com.green.gittest.calendar.model.PostCalendarReq;
-import com.green.gittest.calendar.model.PostCalendarRes;
-import com.green.gittest.calendar.model.UpdateCalendarReq;
+import com.green.gittest.calendar.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -16,6 +13,6 @@ public interface CalendarMapper {
     List<GetCalendarRes> getCalendarFromPetId(long petId);
     int updateCalendar(UpdateCalendarReq p);
     int deleteCalendar(long calendarId);
-    GetCalendarRes getCalendarDetail(long calendarId);
+    GetCalendarDetailRes getCalendarDetail(long calendarId);
 
 }

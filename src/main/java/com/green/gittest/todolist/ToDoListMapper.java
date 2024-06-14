@@ -11,6 +11,6 @@ public interface ToDoListMapper {
     List<GetToDoListRes> getUpcomingToDoList(long userId);
     int updateToDoListContent(UpdateToDoListReq p);
     int updateToDoListIsCompleted(long listId);
-    int deleteToDoList(long listId);
+    int deleteToDoList(Long listId);
     int deleteAllTodoList(Long userId);
 }

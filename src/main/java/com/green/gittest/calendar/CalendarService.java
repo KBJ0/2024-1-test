@@ -69,9 +69,9 @@ public class CalendarService {
     }
 
 
-    public ResultDto<GetCalendarRes> getCalendarDetail(long calendarId) {
+    public ResultDto<GetCalendarDetailRes> getCalendarDetail(long calendarId) {
         if(checkMapper.getCalendarId(calendarId) == null ) throw new CalendarNotFoundException();
-        GetCalendarRes list = mapper.getCalendarDetail(calendarId);
+        GetCalendarDetailRes list = mapper.getCalendarDetail(calendarId);
         return ResultDto.resultDto("SU","캘린더를 정상적으로 불러왔습니다.",list);
     }
 }
