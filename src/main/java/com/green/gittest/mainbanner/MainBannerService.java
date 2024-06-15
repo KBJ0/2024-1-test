@@ -32,8 +32,8 @@ public class MainBannerService {
 
         return mapper.postMainBanner(imageName);
     }
-    List<GetMainBannerRes> getMainBanner(Object p){
-        return mapper.getMainBanner(p);
+    List<GetMainBannerRes> getMainBanner(){
+        return mapper.getMainBanner();
     }
     int deleteMainBanner(Long imageId){
         return mapper.deleteMainBanner(imageId);

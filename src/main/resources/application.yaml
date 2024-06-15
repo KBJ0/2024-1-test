@@ -11,8 +11,8 @@ spring:
         cache.use_second_level_cache: false  # JCache 설정 비활성화
   servlet:
     multipart:
-      max-file-size: 5MB
-      max-request-size: 30MB
+      max-file-size: 1000MB
+      max-request-size: 1000MB
   data:
     redis:
       port: 6379
@@ -45,7 +45,6 @@ spring:
      redis:
        port: 6379
        host: 192.168.0.144
-
    datasource:
      url: jdbc:log4jdbc:mariadb://192.168.0.144:3306/db_odd_first_2
      username: odd_first_2
@@ -54,14 +53,11 @@ spring:
      open-in-view: false
      properties:
        hibernate:
-         cache.use_second_level_cache: false  # JCache 설정 비활성화
+         cache.use_second_level_cache: false
    servlet:
      multipart:
-       max-file-size: 5MB
-       max-request-size: 30MB
-   sql:
-     init:
-       mode: always
+       max-file-size: 1000MB
+       max-request-size: 1000MB
 
 mybatis:
   mapper-locations: mappers/**/*.xml

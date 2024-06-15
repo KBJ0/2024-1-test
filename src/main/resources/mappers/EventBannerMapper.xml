@@ -14,9 +14,7 @@
         FROM
         event_banner
         ORDER BY image_id
-        LIMIT #{startIdx}, #{size}
     </select>
-
 
     <delete id ="deleteEventBanner">
         DELETE FROM event_banner

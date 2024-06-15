@@ -1,7 +1,6 @@
 package com.green.gittest.eventbanner;
 
 import com.green.gittest.common.model.ResultDto;
-import com.green.gittest.eventbanner.model.GetEventBannerReq;
 import com.green.gittest.eventbanner.model.GetEventBannerRes;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -29,8 +28,8 @@ public class EventBannerController {
     }
     @GetMapping
     @Operation(summary = "EventBanner 불러오기" , description = "EventBanner에 추가한 사진을 불러옵니다")
-    public ResultDto<List<GetEventBannerRes>> getEventBanner(@ParameterObject @ModelAttribute GetEventBannerReq p){
-        return ResultDto.resultDto("SU","이벤트 배너 불러오기 완료",service.getEventBanner(p));
+    public ResultDto<List<GetEventBannerRes>> getEventBanner(){
+        return ResultDto.resultDto("SU","이벤트 배너 불러오기 완료",service.getEventBanner());
     }
     @DeleteMapping
     @Operation(summary = "EventBanner 삭제" , description = "EventBanner에 추가한 사진을 삭제합니다")

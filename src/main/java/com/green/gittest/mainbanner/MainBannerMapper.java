@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper
 public interface MainBannerMapper {
     int postMainBanner(String imageName);
-    List<GetMainBannerRes> getMainBanner(Object p);
+    List<GetMainBannerRes> getMainBanner();
     int deleteMainBanner(Long imageId);
 }

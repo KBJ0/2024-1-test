@@ -18,8 +18,4 @@ public abstract class GlobalConst {
 
     public final static String NICKNAME_PATTERN =
             String.format("^[가-힣]{%d,%d}$",NICKNAME_MIN_SIZE,NICKNAME_MAX_SIZE);
-
-
-
-
 }

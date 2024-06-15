@@ -2,7 +2,6 @@ package com.green.gittest.eventbanner;
 
 
 import com.green.gittest.common.CustomFileUtils;
-import com.green.gittest.eventbanner.model.GetEventBannerReq;
 import com.green.gittest.eventbanner.model.GetEventBannerRes;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,8 +31,8 @@ public class EventBannerService {
         }
         return mapper.postEventBanner(imageName);
     }
-    List<GetEventBannerRes> getEventBanner(GetEventBannerReq p){
-        return mapper.getEventBanner(p);
+    List<GetEventBannerRes> getEventBanner(){
+        return mapper.getEventBanner();
     }
     int deleteEventBanner(Long imageId){
         return mapper.deleteEventBanner(imageId);
