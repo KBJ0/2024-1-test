@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.green.gittest.mainbanner.MainBannerMapper">
 
-<!--    <insert id="postMainBanner" useGeneratedKeys="true" keyProperty="imageId">-->
-<!--        INSERT INTO main_banner-->
-<!--        (image_url)-->
-<!--        VALUES-->
-<!--        (#{imageUrl})-->
-<!--    </insert>-->
+    <insert id="postMainBanner">
+        INSERT INTO main_banner
+        (image_url)
+        VALUES
+        (#{imageName})
+    </insert>
 
     <select id="getMainBanner">
         SELECT

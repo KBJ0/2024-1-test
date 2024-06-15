@@ -9,7 +9,7 @@ import java.util.List;
 
 @Mapper
 public interface EventBannerMapper {
-//    int postEventBanner(MultipartFile imageUrl);// 11
+    int postEventBanner(String imageName);
     List<GetEventBannerRes> getEventBanner(GetEventBannerReq p);
     int deleteEventBanner(Long imageId);
 }

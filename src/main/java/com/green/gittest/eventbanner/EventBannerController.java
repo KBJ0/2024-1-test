@@ -16,17 +16,17 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/eventBanner")
+@RequestMapping("api/eventbanner")
 @Tag(name = "EventBanner", description = "EventBanner CRUD")
 public class EventBannerController {
     private final EventBannerService service;
 
-//    @PostMapping
-//    @Operation(summary = "EventBanner 등록" , description = "EventBanner에 추가할 사진을 등록합니다. \nMultipartFile 타입으로 주세요")
-//    public ResultDto<Integer> postEventBanner(@RequestPart MultipartFile imageUrl){
-//        service.postEventBanner(imageUrl);
-//        return ResultDto.resultDto("SU", "이벤트 배너 사진을 등록 하였습니다.");
-//    }
+    @PostMapping
+    @Operation(summary = "EventBanner 등록" , description = "EventBanner에 추가할 사진을 등록합니다. \nMultipartFile 타입으로 주세요")
+    public ResultDto<Integer> postEventBanner(@RequestPart MultipartFile imageUrl){
+        service.postEventBanner(imageUrl);
+        return ResultDto.resultDto("SU", "이벤트 배너 사진을 등록 하였습니다.");
+    }
     @GetMapping
     @Operation(summary = "EventBanner 불러오기" , description = "EventBanner에 추가한 사진을 불러옵니다")
     public ResultDto<List<GetEventBannerRes>> getEventBanner(@ParameterObject @ModelAttribute GetEventBannerReq p){

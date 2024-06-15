@@ -8,8 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface MainBannerMapper {
-    // 11
-//    int postMainBanner(MultipartFile imageUrl);
+    int postMainBanner(String imageName);
     List<GetMainBannerRes> getMainBanner(Object p);
     int deleteMainBanner(Long imageId);
 }

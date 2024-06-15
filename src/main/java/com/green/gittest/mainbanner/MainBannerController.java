@@ -14,17 +14,17 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/mainBanner")
+@RequestMapping("api/mainbanner")
 @Tag(name = "MainBanner", description = "MainBanner CRUD")
 public class MainBannerController {
     private final MainBannerService service;
-    // 11
-//    @PostMapping
-//    @Operation(summary = "MainBanner 등록" , description = "MainBanner에 추가할 사진을 등록합니다. \nMultipartFile 타입으로 주세요")
-//    public ResultDto<Integer> postMainBanner(@RequestPart MultipartFile imageUrl){
-//        service.postMainBanner(imageUrl);
-//        return ResultDto.resultDto("SU","메인 배너 사진을 등록 하였습니다");
-//    }
+
+    @PostMapping
+    @Operation(summary = "MainBanner 등록" , description = "MainBanner에 추가할 사진을 등록합니다. \nMultipartFile 타입으로 주세요")
+    public ResultDto<Integer> postMainBanner(@RequestPart MultipartFile imageUrl){
+        service.postMainBanner(imageUrl);
+        return ResultDto.resultDto("SU","메인 배너 사진을 등록 하였습니다");
+    }
     @GetMapping
     @Operation(summary = "MainBanner 불러오기" , description = "MainBanner에 추가한 사진을 불러옵니다")
     public ResultDto<List<GetMainBannerRes>> getMainBanner(@RequestParam Object p){
